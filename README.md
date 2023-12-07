@@ -2,6 +2,6 @@
 Ui Interfaces for Lynx commerce
 
 
- ## Teams
+ ## Teams UI
 
 - Santiago Rico
