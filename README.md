@@ -3,5 +3,5 @@ Ui Interfaces for Lynx commerce
 
 
  ## Teams
- 
-- Santiago
+
+- Santiago Rico
