@@ -5,8 +5,9 @@
         count += 1
     }
 </script>
-
+<slot/>
 <h2>{count}</h2>
-<button onclick={handleIncrementCount}>
+
+<button class="bg-slate-400" onclick={handleIncrementCount} >
     Increment
 </button>
