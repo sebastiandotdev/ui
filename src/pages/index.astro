@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Button from '../components/Button.svelte'
+import Footer from '../components/footer.astro'
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <Button client:only="svelte">Hola mundo</Button>
+    <Footer />
   </main>
 </Layout>
