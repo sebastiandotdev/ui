@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint --ext .js,.astro src",
+    "fmt.check": "prettier . --check",
     "fmt": "prettier --write ."
   },
   "dependencies": {
@@ -17,7 +18,7 @@
     "@astrojs/tailwind": "5.0.3",
     "astro": "4.0.3",
     "svelte": "5.0.0-next.22",
-    "tailwindcss": "3.0.24",
+    "tailwindcss": "3.3.6",
     "typescript": "5.3.3"
   },
   "devDependencies": {
