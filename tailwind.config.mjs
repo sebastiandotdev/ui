@@ -8,6 +8,14 @@ export default {
         inter: ['Inter'],
       },
     },
+    colors: {
+      gray: '#f5f5f7',
+      black: '#000000',
+      white: '#FFFFFF',
+      purple: '#3858D6',
+      'gray-dark': '#8B8E99',
+      'blue-dark': '#3858D6',
+    },
   },
   plugins: [],
 }
