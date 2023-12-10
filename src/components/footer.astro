@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets'
 import IconsNetwork from './icons-network.astro'
+import logoIphone from '../../public/Logo.png'
 ---
 
-<footer class="relative w-full flex flex-wrap justify-evenly py-12 font-inter">
+<footer class="relative bg-black w-full flex flex-wrap justify-evenly py-12 font-inter">
   <svg class="absolute top-0 bottom-0 right-0 h-full -z-10 font" viewBox="0 0 1440 638" fill="none">
     <path
       d="M1440 638L0 638L-5.57757e-05 0.000125889L1440 0L1440 638Z"
@@ -125,7 +127,7 @@ import IconsNetwork from './icons-network.astro'
     <figure
       class="w-full flex flex-col justify-center md:justify-between py-16 items-center md:items-end md:w-[105px]"
     >
-      <img src="../../public/Logo.png" alt="" />
+      <Image src={logoIphone} alt="Logo image" />
       <p class="text-[10px] text-gray-dark">© 2023 — ex-iphones</p>
     </figure>
   </section>
