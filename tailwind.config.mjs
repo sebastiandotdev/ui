@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["Poppins"],
-        inter: ["Inter"]
-      }
+        poppins: ['Poppins'],
+        inter: ['Inter'],
+      },
     },
   },
   plugins: [],
