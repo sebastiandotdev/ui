@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/layout.astro'
+import { Image } from 'astro:assets'
+import phoneCall from '../../public/bxs_phone-call.png'
+import logoEmail from '../../public/logo-email.png'
+---
+
+<Layout title="Contact - Lynx">
+  <section class="bg-black w-[35%]">
+    <article class="text-white">
+      <h2 class="bolt text-[28px]"><b>Contact Information</b></h2>
+      <p class="font-[500] text-[18px]">Say something start a live chat!</p>
+
+      <figure class="flex gap-3 items-center">
+        <Image src={phoneCall} alt="phone call" />
+        <p><b>+91 73569 83829</b></p>
+      </figure>
+      <figure class="flex gap-3 items-center">
+        <Image src={logoEmail} alt="logo email" />
+        <p><b>tags-dev-corporation@gmail.com</b></p>
+      </figure>
+    </article>
+  </section>
+</Layout>
