@@ -6,4 +6,4 @@ Ui Interfaces for Lynx commerce
 
 - Santiago Rico
 - Sebastian Garcia
-- Carlos Bonet 
+- Carlos Bonet
