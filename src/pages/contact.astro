@@ -7,6 +7,7 @@ import logoLocation from '../../public/images/Location.png'
 import circleOne from '../../public/images/Ellipse.png'
 import circleTwo from '../../public/images/Ellipse2.png'
 import IconsNetwork from '../components/icons-network.astro'
+import Navbar from '../components/Navbar.svelte'
 const contactInfo = [
   {
     src: phoneCall,
@@ -27,6 +28,7 @@ const contactInfo = [
 ---
 
 <Layout title="Contact - Lynx">
+  <Navbar client:load />
   <section>
     <article class="bg-black w-[35%] relative p-3">
       <article class="text-white">
