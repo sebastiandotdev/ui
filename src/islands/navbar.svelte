@@ -24,7 +24,7 @@
       setTimeout(() => {
         isOpenMenuHamburguer = false
         isClosingMenu = false
-      }, 400)
+      }, 200)
     } else {
       isOpenMenuHamburguer = true
     }
@@ -33,26 +33,29 @@
 
 <!--  Version Tablets - Desktop -->
 <nav
-  class={`flex w-full h-[70px] bg-transparent shadow-md shadow-gray-dark  justify-around items-center font-poppins `}
+  class={'flex relative w-full h-[70px] bg-transparent shadow-md shadow-gray-dark justify-around items-center font-poppins '}
 >
   <div class="flex items-center w-2/3 sm:w-20 hover:animate-pulse">
     <a href="/" class={'flex items-center w-full justify-around sm:w-20 gap-1 '}>
-      <img src={Logo.src} alt="" class="h-6 w-6" />
-      <span class="text-[#8B8E99]">Lynx</span>
+      <img src={Logo.src} alt="" class="h-6 w-6 " />
+      <span class="text-[#8B8E99] hover:text-[#3858D6]">Lynx</span>
     </a>
   </div>
   <div class="gap-8 hidden sm:flex text-[#8B8E99] font-semibold font-inter">
     {#each navbar as content}
-      <a href={content.src} class="hover:border-b-[1px] hover:border-b-[#8B8E99]">
+      <a
+        href={content.src}
+        class=" hover:text-[#3858D6]"
+      >
         {content.title}
       </a>
     {/each}
   </div>
 
   <div class="font-semibold hidden sm:flex gap-2">
-    <a href="/Login" class="text-[#8B8E99]">Login</a>
+    <a href="/login" class="text-[#8B8E99] hover:text-[#3858D6]">Login</a>
     <span class="text-[#8B8E99]">|</span>
-    <a href="/SingUp" class="text-[#8B8E99]">Sign Up</a>
+    <a href="/register" class="text-[#8B8E99] hover:text-[#3858D6]">Sign Up</a>
   </div>
 
   <button onclick={hadnleIsOpenMenuHamburguer} class=" flex sm:hidden">
@@ -82,14 +85,14 @@
         <img src={Logo.src} alt="" class="h-10 w-10" />
         <span class="text-[#8B8E99] text-lg">Lynx</span>
       </a>
-      <button onclick={hadnleIsOpenMenuHamburguer}
-      class={`border rounded-full p-1 icon icon-tabler icon-tabler-x absolute right-3 top-6 cursor-pointer text-[#8B8E99] ${
-        isClosingMenu ? 'rotate-out' : ''
-      }`}
+      <button
+        onclick={hadnleIsOpenMenuHamburguer}
+        class={` p-1 icon icon-tabler icon-tabler-x absolute right-3 top-6 cursor-pointer text-[#8B8E99] ${
+          isClosingMenu ? 'rotate-out' : ''
+        }`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-         
           width="30"
           height="30"
           viewBox="0 0 24 24"
@@ -105,14 +108,14 @@
       </button>
 
       {#each navbar as content}
-        <a href={content.src} class=" text-left font-inter m-6 text-[#8B8E99] ">
+        <a href={content.src} class=" text-left font-inter m-6 text-[#8B8E99] hover:text-[#3858D6]">
           {content.title}
         </a>
       {/each}
       <div class="font-semibold sm:flex gap-2 m-6">
-        <a href="/Login" class="text-[#8B8E99]">Login</a>
+        <a href="/login" class="text-[#8B8E99] hover:text-[#3858D6]">Login</a>
         <span class="text-[#8B8E99]">|</span>
-        <a href="/SingUp" class="text-[#8B8E99]">Sign Up</a>
+        <a href="/register" class="text-[#8B8E99] hover:text-[#3858D6]">Sign Up</a>
       </div>
     </div>
   </div>
@@ -165,41 +168,43 @@
 
   /* Animation Exit Menu  */
   .scale-out-tr {
-	-webkit-animation: scale-out-tr 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: scale-out-tr 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-@-webkit-keyframes scale-out-tr {
+    -webkit-animation: scale-out-tr 0.9s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+	        animation: scale-out-tr 0.9s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+  }
+  
+  @-webkit-keyframes scale-out-tr {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
+    -webkit-transform: scaleY(2);
+            transform: scaleY(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
   }
 }
 @keyframes scale-out-tr {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
+    -webkit-transform: scaleY(2);
+            transform: scaleY(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
   }
 }
+
 
   .rotate-out {
     -webkit-animation: rotate-out 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;

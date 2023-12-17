@@ -1,0 +1,13 @@
+---
+import Navbar from '../islands/navbar.svelte'
+import Layout from '../layouts/Layout.astro'
+import FormSingUp from '../islands/form-register.svelte'
+import LayoutAuth from '../layouts/Auth.astro'
+---
+
+<Layout title="Login">
+  <Navbar client:load />
+  <LayoutAuth>
+    <FormSingUp client:idle />
+  </LayoutAuth>
+</Layout>
