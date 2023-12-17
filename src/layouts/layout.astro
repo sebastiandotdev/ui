@@ -33,7 +33,21 @@ const { title } = Astro.props
 </html>
 
 <style is:global>
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
   .text-balance {
     text-wrap: balance;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px; /*Ajusta el ancho de la barra de desplazamiento */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #2563eb;
+    border-radius: 10px;
+    border: 1px solid #ffffff; /* Ajusta el ancho del borde de la barra de desplazamiento */
   }
 </style>
