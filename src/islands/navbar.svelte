@@ -1,23 +1,10 @@
 <script lang="ts">
   import Logo from '../../public/Logo.png'
+  import {navbar} from '../lib/const'
+
   let isOpenMenuHamburguer = $state(false)
   let isClosingMenu = $state(false)
-
-  const navbar = [
-    {
-      title: 'Home',
-      src: '/',
-    },
-    {
-      title: 'About',
-      src: '/about',
-    },
-    {
-      title: 'Contact',
-      src: '/contact',
-    },
-  ]
-
+  
   const hadnleIsOpenMenuHamburguer = () => {
     if (isOpenMenuHamburguer) {
       isClosingMenu = true
