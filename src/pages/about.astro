@@ -4,29 +4,7 @@ import { Image } from 'astro:assets'
 import aboutIphone from '../../public/images/about-iphone.png'
 import aboutProfile from '../../public/images/about-profile.png'
 import Navbar from '../islands/navbar.svelte'
-
-const infoAbout = [
-  {
-    title: 'Who ex.iphones. started',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar. Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.',
-  },
-  {
-    title: 'Things we take for granted',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar. Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.',
-  },
-  {
-    title: 'Future of ex.iphones.',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar. Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.',
-  },
-  {
-    title: 'Something nobody knows about us',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar. Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.',
-  },
-]
+import { infoAbout } from '../lib/const'
 ---
 
 <Layout title="About - Lynx">

@@ -1,5 +1,4 @@
 <script lang="ts">
-  
   import Logo from '../../public/Logo.png'
   import Security from '../../public/images/password.svg'
   import Phone from '../../public/images/phone.svg'

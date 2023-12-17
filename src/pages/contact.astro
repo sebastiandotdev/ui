@@ -1,30 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import { Image } from 'astro:assets'
-import phoneCall from '../../public/images/bxs_phone-call.png'
-import logoEmail from '../../public/images/logo-email.png'
-import logoLocation from '../../public/images/Location.png'
 import circleOne from '../../public/images/Ellipse.png'
 import circleTwo from '../../public/images/Ellipse2.png'
 import IconsNetwork from '../components/icons/network.astro'
 import Navbar from '../islands/navbar.svelte'
-const contactInfo = [
-  {
-    src: phoneCall,
-    text: '+91 73569 83829',
-    alt: 'logo phone  call',
-  },
-  {
-    src: logoEmail,
-    text: 'tags-dev-corporation@gmail.com',
-    alt: 'logo email ',
-  },
-  {
-    src: logoLocation,
-    text: '7th Avenue, KL ex.iphones. park, Calicut',
-    alt: 'logo location',
-  },
-]
+import { contactInfo } from '../lib/const'
 ---
 
 <Layout title="Contact - Lynx">
