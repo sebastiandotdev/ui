@@ -4,7 +4,6 @@ import { navbar } from '@/lib/const'
 import Logo from '@/../public/Logo.png'
 import { useState } from 'react'
 export default function Navbar() {
-
   const [isOpenMenuHamburger, setIsOpenMenuHamburger] = useState(false)
   const [isClosingMenu, setIsClosingMenu] = useState(false)
 
@@ -19,7 +18,7 @@ export default function Navbar() {
       setIsOpenMenuHamburger(true)
     }
   }
-  
+
   return (
     <>
       {/* Version Tablets - Desktop  */}
@@ -28,39 +27,47 @@ export default function Navbar() {
           'flex relative w-full h-[70px] bg-transparent shadow-md shadow-gray-dark justify-around items-center font-poppins '
         }
       >
-        <div className="flex items-center w-2/3 sm:w-20 hover:animate-pulse">
-          <Link href="/" className="flex items-center w-full justify-around sm:w-20 gap-1 ">
-            <img src={Logo.src} alt="" className="h-6 w-6 " />
-            <span className="text-[#8B8E99] hover:text-[#3858D6]">Lynx</span>
+        <div className='flex items-center w-2/3 sm:w-20 hover:animate-pulse'>
+          <Link
+            href='/'
+            className='flex items-center w-full justify-around sm:w-20 gap-1 '
+          >
+            <img src={Logo.src} alt='' className='h-6 w-6 ' />
+            <span className='text-[#8B8E99] hover:text-[#3858D6]'>Lynx</span>
           </Link>
         </div>
-        <div className="gap-8 hidden sm:flex text-[#8B8E99] font-semibold font-inter">
+        <div className='gap-8 hidden sm:flex text-[#8B8E99] font-semibold font-inter'>
           {navbar.map((data, index) => (
-            <Link href={data.src} className=" hover:text-[#3858D6]" key={index} onClick={() => setIsClosingMenu(true)}>
+            <Link
+              href={data.src}
+              className=' hover:text-[#3858D6]'
+              key={index}
+              onClick={() => setIsClosingMenu(true)}
+            >
               {data.title}
             </Link>
           ))}
         </div>
 
-        <div className="font-semibold hidden sm:flex gap-2">
-          <a href="/login" className="text-[#8B8E99] hover:text-[#3858D6]">
+        <div className='font-semibold hidden sm:flex gap-2'>
+          <a href='/login' className='text-[#8B8E99] hover:text-[#3858D6]'>
             Login
           </a>
-          <span className="text-[#8B8E99]">|</span>
-          <a href="/register" className="text-[#8B8E99] hover:text-[#3858D6]">
+          <span className='text-[#8B8E99]'>|</span>
+          <a href='/register' className='text-[#8B8E99] hover:text-[#3858D6]'>
             Sign Up
           </a>
         </div>
 
-        <button onClick={handleIsOpenMenuHamburger} className=" flex sm:hidden">
+        <button onClick={handleIsOpenMenuHamburger} className=' flex sm:hidden'>
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
+            xmlns='http://www.w3.org/2000/svg'
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
             style={{ fill: '#8B8E99', transform: '', msFilter: '' }}
           >
-            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+            <path d='M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z'></path>
           </svg>
         </button>
       </nav>
@@ -72,10 +79,13 @@ export default function Navbar() {
             isClosingMenu ? 'scale-out-tr' : 'scale-in-tr'
           }`}
         >
-          <div className=" flex flex-col text-2xl items-center justify-center font-semibold font-inter bg-white bg- w-full h-[100vh]">
-            <Link href="/" className="flex gap-2 items-center absolute left-2 top-4">
-              <img src={Logo.src} alt="" className="h-10 w-10" />
-              <span className="text-[#8B8E99] text-lg">Lynx</span>
+          <div className=' flex flex-col text-2xl items-center justify-center font-semibold font-inter bg-white bg- w-full h-[100vh]'>
+            <Link
+              href='/'
+              className='flex gap-2 items-center absolute left-2 top-4'
+            >
+              <img src={Logo.src} alt='' className='h-10 w-10' />
+              <span className='text-[#8B8E99] text-lg'>Lynx</span>
             </Link>
             <button
               onClick={handleIsOpenMenuHamburger}
@@ -84,41 +94,50 @@ export default function Navbar() {
               }`}
             >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                xmlns='http://www.w3.org/2000/svg'
+                width='30'
+                height='30'
+                viewBox='0 0 24 24'
+                stroke-width='2'
+                stroke='currentColor'
+                fill='none'
+                stroke-linecap='round'
+                stroke-linejoin='round'
               >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M18 6l-12 12" />
-                <path d="M6 6l12 12" />
+                <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                <path d='M18 6l-12 12' />
+                <path d='M6 6l12 12' />
               </svg>
             </button>
             {navbar.map((data, index) => (
               <Link
                 href={data.src}
-                className=" text-left font-inter m-6 text-[#8B8E99] hover:text-[#3858D6]" key={index}
+                className=' text-left font-inter m-6 text-[#8B8E99] hover:text-[#3858D6]'
+                key={index}
               >
                 {data.title}
               </Link>
             ))}
-            <div className="font-semibold sm:flex gap-2 m-6">
-              <Link href="/login" className="text-[#8B8E99] hover:text-[#3858D6]">
+            <div className='font-semibold sm:flex gap-2 m-6'>
+              <Link
+                href='/login'
+                className='text-[#8B8E99] hover:text-[#3858D6]'
+              >
                 Login
               </Link>
-              <span className="text-[#8B8E99]">|</span>
-              <Link href="/register" className="text-[#8B8E99] hover:text-[#3858D6]">
+              <span className='text-[#8B8E99]'>|</span>
+              <Link
+                href='/register'
+                className='text-[#8B8E99] hover:text-[#3858D6]'
+              >
                 Sign Up
               </Link>
             </div>
           </div>
         </div>
-      ) : ""}
+      ) : (
+        ''
+      )}
     </>
   )
 }
