@@ -1,6 +1,6 @@
-import phoneCall from '../../public/images/bxs_phone-call.png'
-import logoEmail from '../../public/images/logo-email.png'
-import logoLocation from '../../public/images/Location.png'
+import phoneCall from '@/../public/bxs_phone-call.png'
+import logoEmail from '@/../public/logo-email.png'
+import logoLocation from '@/../public/Location.png'
 
 export const infoAbout = [
   {
