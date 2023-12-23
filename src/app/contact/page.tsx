@@ -2,7 +2,7 @@ import { contactInfo } from '@/lib/const'
 import Image from 'next/image'
 import CircleOne from '@/../public/Ellipse.png'
 import CircleTwo from '@/../public/Ellipse2.png'
-import {Network} from '@/components/icons'
+import { Network } from '@/components/icons'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

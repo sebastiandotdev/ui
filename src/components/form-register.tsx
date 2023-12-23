@@ -1,16 +1,19 @@
 // Migrated Component
 'use client'
-import Logo from '@/../public/Logo.png'
-import { Password } from '@/components/icons'
-
-import Phone from '@/../public/phone.svg'
-import User from '@/../public/User.svg'
-import Email from '@/../public/email.svg'
-import IconGoogle from '@/../public/logoGoogle.svg'
-import Eye from '@/../public/eye.svg'
+import Logo from '@/../public/logo.png'
+import {
+  Password,
+  IconEye,
+  IconGoogle,
+  IconUser,
+  IconPhon,
+  IconEmail,
+} from '@/components/icons'
 import { useState } from 'react'
 import Link from 'next/link'
 import Input from './ui/input'
+import ButtonLogin from './ui/button-login'
+import ButtonGoogle from './ui/button-google'
 
 export default function FormRegister() {
   const [showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false)
@@ -50,11 +53,7 @@ export default function FormRegister() {
               </label>
               <div className='relative'>
                 <Input type='text' name='username' placeholder='Jhon Doe' />
-                <img
-                  src={User.src}
-                  alt=''
-                  className='absolute h-5 w-5 left-3 top-1/2 transform -translate-y-1/2'
-                />
+                <IconUser />
               </div>
             </div>
             <div className='mb-2 relative'>
@@ -70,11 +69,7 @@ export default function FormRegister() {
                   name='email'
                   placeholder='example@gmail.com'
                 />
-                <img
-                  src={Email.src}
-                  alt=''
-                  className='absolute h-5 w-5 left-3 top-1/2 transform -translate-y-1/2'
-                />
+                <IconEmail />
               </div>
             </div>
             <div className='mb-2 relative'>
@@ -97,7 +92,7 @@ export default function FormRegister() {
                   onClick={togglePasswordVisibility}
                 >
                   {showPassword ? (
-                    <img src={Eye.src} alt='' />
+                    <IconEye />
                   ) : (
                     <svg height='15' width='15' viewBox='0 0 640 512'>
                       <path
@@ -118,12 +113,9 @@ export default function FormRegister() {
                 Confirm Password
               </label>
               <div className='relative'>
-                <input
+                <Input
                   type={showConfirmPassword ? 'text' : 'password'}
-                  id='confirmPassword'
                   name='confirmPassword'
-                  required
-                  className='w-full border rounded-md border-[#E4E7E9] outline-none focus:border-[#2563EB] py-2 px-3 pl-10 placeholder:text-xs md:placeholder:text-base'
                   placeholder='Enter your password'
                 />
                 <Password />
@@ -133,7 +125,7 @@ export default function FormRegister() {
                   onClick={togglePasswordConfirmVisibility}
                 >
                   {showConfirmPassword ? (
-                    <img src={Eye.src} alt='' />
+                    <IconEye />
                   ) : (
                     <svg height='15' width='15' viewBox='0 0 640 512'>
                       <path
@@ -154,19 +146,12 @@ export default function FormRegister() {
                 Phone Number
               </label>
               <div className='relative'>
-                <input
+                <Input
                   type='tel'
-                  id='phoneNumber'
                   name='phoneNumber'
                   placeholder='Enter your phone number'
-                  required
-                  className='w-full border rounded-md border-[#E4E7E9] outline-none focus:border-[#2563EB] py-2 px-3 pl-10 placeholder:text-xs md:placeholder:text-base'
                 />
-                <img
-                  src={Phone.src}
-                  alt='Phone Icon'
-                  className='absolute h-5 w-5 left-3 top-1/2 transform -translate-y-1/2'
-                />
+                <IconPhon />
               </div>
             </div>
 
@@ -177,12 +162,7 @@ export default function FormRegister() {
             </div>
 
             <div className='mb-2'>
-              <button
-                type='submit'
-                className='bg-[#2563EB] text-white py-2 px-4 rounded w-full hover:bg-[#2055c6]'
-              >
-                Ingresar
-              </button>
+              <ButtonLogin type='submit' />
             </div>
             <div className='mb-2 mt-4 flex gap-2'>
               <p className='text-sm'>Already have an account?</p>
@@ -200,10 +180,7 @@ export default function FormRegister() {
               </p>
             </div>
             <div className='mt-6'>
-              <button className=' flex justify-center gap-2 items-center bg-[#d5d8e5] rounded-2xl text-sm py-2 px-4 w-full hover:bg-[#c3c5d1]'>
-                <img src={IconGoogle.src} alt='Icon Google' />
-                Continue wtih Google
-              </button>
+              <ButtonGoogle />
             </div>
           </form>
         </div>
