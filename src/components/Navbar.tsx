@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { navbar } from '@/lib/const'
-import Logo from '@/../public/Logo.png'
+import Logo from '@/../public/logo.png'
 import { useState } from 'react'
 export default function Navbar() {
   const [isOpenMenuHamburger, setIsOpenMenuHamburger] = useState(false)
@@ -101,8 +101,8 @@ export default function Navbar() {
                 stroke-width='2'
                 stroke='currentColor'
                 fill='none'
-                stroke-linecap='round'
-                stroke-linejoin='round'
+                strokeLinecap='round'
+                strokeLinejoin='round'
               >
                 <path stroke='none' d='M0 0h24v24H0z' fill='none' />
                 <path d='M18 6l-12 12' />
@@ -114,6 +114,7 @@ export default function Navbar() {
                 href={data.src}
                 className=' text-left font-inter m-6 text-[#8B8E99] hover:text-[#3858D6]'
                 key={index}
+                onClick={handleIsOpenMenuHamburger}
               >
                 {data.title}
               </Link>
@@ -122,6 +123,7 @@ export default function Navbar() {
               <Link
                 href='/login'
                 className='text-[#8B8E99] hover:text-[#3858D6]'
+                onClick={handleIsOpenMenuHamburger}
               >
                 Login
               </Link>
@@ -129,6 +131,7 @@ export default function Navbar() {
               <Link
                 href='/register'
                 className='text-[#8B8E99] hover:text-[#3858D6]'
+                onClick={handleIsOpenMenuHamburger}
               >
                 Sign Up
               </Link>

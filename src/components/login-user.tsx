@@ -3,10 +3,9 @@ import Input from '@/components/ui/input'
 import Link from 'next/link'
 import { useState } from 'react'
 import Logo from '@/../public/Logo.png'
-import Email from '@/../public/email.svg'
-import { Password } from '@/components/icons'
-import Eye from '@/../public/eye.svg'
-import IconGoogle from '@/../public/logoGoogle.svg'
+import { IconEye, IconEmail, Password, IconGoogle } from '@/components/icons'
+import ButtonLogin from './ui/button-login'
+import ButtonGoogle from './ui/button-google'
 
 export default function LoginUser() {
   const [showPassword, setShowPassword] = useState<boolean>(false)
@@ -45,11 +44,7 @@ export default function LoginUser() {
                   placeholder='Jhondao@gmail.com'
                   name='email'
                 />
-                <img
-                  src={Email.src}
-                  alt=''
-                  className='absolute h-5 w-5 left-3 top-1/2 transform -translate-y-1/2'
-                />
+                <IconEmail />
               </div>
             </div>
 
@@ -73,7 +68,7 @@ export default function LoginUser() {
                   onClick={togglePasswordVisibility}
                 >
                   {showPassword ? (
-                    <img src={Eye.src} alt='' />
+                    <IconEye />
                   ) : (
                     <svg height='15' width='15' viewBox='0 0 640 512'>
                       <path
@@ -93,12 +88,7 @@ export default function LoginUser() {
             </div>
 
             <div className='mb-2'>
-              <button
-                type='submit'
-                className='bg-[#2563EB] text-white py-2 px-4 rounded w-full hover:bg-[#2055c6]'
-              >
-                Ingresar
-              </button>
+              <ButtonLogin />
             </div>
             <div className='mb-2 mt-4 flex gap-2'>
               <p className='text-sm'>Already have an account?</p>
@@ -116,10 +106,7 @@ export default function LoginUser() {
               </p>
             </div>
             <div className='mt-6'>
-              <button className=' flex justify-center gap-2 items-center bg-[#d5d8e5] rounded-2xl text-sm py-2 px-4 w-full hover:bg-[#c3c5d1]'>
-                <img src={IconGoogle.src} alt='Icon Google' />
-                Continue wtih Google
-              </button>
+              <ButtonGoogle />
             </div>
           </form>
         </div>
