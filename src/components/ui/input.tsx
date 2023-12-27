@@ -4,7 +4,7 @@ type PropsInput = InputHTMLAttributes<HTMLInputElement>
 // interface PropsDeInputs extends HTMLAttributes<HTMLInputElement>{
 // }
 
-export default function Input(props: PropsInput) {
+export function Input(props: PropsInput) {
   return (
     <input
       {...props}
