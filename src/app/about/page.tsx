@@ -3,6 +3,7 @@
 import { infoAbout } from '@/lib/const'
 import { Network } from '@/components/icons'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -17,7 +18,7 @@ export default function About() {
         </h2>
         <div className='flex items-center justify-center gap-x-8 text-center my-6 w-max mx-auto'>
           <figure className='flex justify-center items-center gap-x-4'>
-            <img src='/about-profile.png' alt='Teams Lynx cop' />
+            <Image src='/about-profile.png' alt='Teams Lynx cop' />
             <figcaption className='font-semibold font-inter text-gray-dark'>
               Feyz ibrahim
             </figcaption>
@@ -32,12 +33,12 @@ export default function About() {
           sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.
         </h5>
         <figure className='w-full flex justify-center items-center my-6'>
-          <img src='/about-iphone.png' alt='Lynx description tags dev' />
+          <Image src='/about-iphone.png' alt='Lynx description tags dev' />
         </figure>
         <div className='flex  justify-center '>
           <div>
-            {infoAbout.map((inf) => (
-              <article className='px-6 py-10 max-w-5xl mx-auto '>
+            {infoAbout.map((inf, i) => (
+              <article className='px-6 py-10 max-w-5xl mx-auto ' key={i}>
                 <h2 className='font-inter font-semibold text-gray-dark text-2xl mb-4 text-center'>
                   {inf.title}
                 </h2>
@@ -59,9 +60,9 @@ export default function About() {
 
         <div className=' border m-10 border-black p-6 md:text-justify max-w-6xl mx-auto text-4xl font-inter font-medium leading-[64px] tracking-[1px] text-gray-dark gradient-left-to-right'>
           <p className='italic w-full max-w-fit-content  md:p-8'>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing
+            {'"'}Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
-          <p className='md:px-8 italic'>elit . Curabitur ac ultrices odio".</p>
+          <p className='md:px-8 italic'>elit . Curabitur ac ultrices odio.{'"'}</p>
         </div>
 
         <article className=' flex  flex-col md:gap-11 py-10 max-w-5xl mx-auto'>
