@@ -23,8 +23,8 @@ export default function Contact() {
             <p className='font-[500] text-[18px] pb-[10%]'>
               Say something start a live chat!
             </p>
-            {contactInfo.map((info) => (
-              <figure className='flex gap-4 mt-[13%]'>
+            {contactInfo.map((info, i) => (
+              <figure className='flex gap-4 mt-[13%]' key={i}>
                 <Image src={info.src} alt={info.alt} />
                 <p>
                   <b>{info.text}</b>
