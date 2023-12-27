@@ -1,7 +1,7 @@
 // Migrated Component
 import Image from 'next/image'
 import { Network } from '@/components/icons'
-import logoIphone from '@/../public/Logo.png'
+import logoIphone from 'public/logo.png'
 
 export default function Footer() {
   return (

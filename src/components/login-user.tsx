@@ -1,11 +1,11 @@
 'use client'
-import Input from '@/components/ui/input'
-import Link from 'next/link'
+
+import Image from 'next/image'
 import { useState } from 'react'
-import Logo from '@/../public/Logo.png'
-import { IconEye, IconEmail, Password, IconGoogle } from '@/components/icons'
-import ButtonLogin from './ui/button-login'
-import ButtonGoogle from './ui/button-google'
+import { Input, ButtonGoogle, ButtonLogin } from '@/components/ui'
+import Link from 'next/link'
+import { IconEye, IconEmail, Password } from '@/components/icons'
+import logoPng from 'public/logo.png'
 
 export default function LoginUser() {
   const [showPassword, setShowPassword] = useState<boolean>(false)
@@ -22,7 +22,7 @@ export default function LoginUser() {
             href='/'
             className=' items-center justify-center gap-1 mt-2 hidden md:flex'
           >
-            <img src={Logo.src} alt='' className='h-6 w-6' />
+            <Image src={logoPng} alt='' className='h-6 w-6' />
             <span className='text-[#8B8E99] text-2xl'>Lynx</span>
           </Link>
 

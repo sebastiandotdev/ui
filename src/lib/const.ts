@@ -1,6 +1,6 @@
-import phoneCall from '@/../public/bxs_phone-call.png'
-import logoEmail from '@/../public/logo-email.png'
-import logoLocation from '@/../public/Location.png'
+import phoneCall from 'public/bxs_phone-call.png'
+import logoEmail from 'public/logo-email.png'
+import logoLocation from 'public/Location.png'
 
 export const infoAbout = [
   {
@@ -24,6 +24,7 @@ export const infoAbout = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar. Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.',
   },
 ]
+
 export const contactInfo = [
   {
     src: phoneCall,
@@ -41,6 +42,7 @@ export const contactInfo = [
     alt: 'logo location',
   },
 ]
+
 export const navbar = [
   {
     title: 'Home',

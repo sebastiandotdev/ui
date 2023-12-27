@@ -10,7 +10,8 @@
 		}
 	},
 	"formatter": {
-		"enabled": true
+		"enabled": true,
+		"ignore": [".next"]
 	},
 	"javascript": {
 		"formatter": {

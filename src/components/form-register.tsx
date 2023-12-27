@@ -1,30 +1,50 @@
-// Migrated Component
 'use client'
-import Logo from '@/../public/logo.png'
+
+import logoPng from 'public/logo.png'
+import Image from 'next/image'
 import {
   Password,
   IconEye,
-  IconGoogle,
   IconUser,
   IconPhon,
   IconEmail,
 } from '@/components/icons'
-import { useState } from 'react'
+import { useState, type FormEvent } from 'react'
 import Link from 'next/link'
-import Input from './ui/input'
-import ButtonLogin from './ui/button-login'
-import ButtonGoogle from './ui/button-google'
+import { ButtonGoogle, ButtonLogin, Input } from '@/components/ui'
 
 export default function FormRegister() {
   const [showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false)
   const [showPassword, setShowPassword] = useState<boolean>(false)
 
-  function togglePasswordVisibility() {
+  const togglePasswordVisibility = () => {
     setShowPassword((showPassword) => !showPassword)
   }
 
-  function togglePasswordConfirmVisibility() {
+  const togglePasswordConfirmVisibility = () => {
     setShowConfirmPassword((showConfirmPassword) => !showConfirmPassword)
+  }
+
+  const handleRegisterUser = async (e: FormEvent) => {
+    e.preventDefault()
+    const url_api = process.env.NEXT_PUBLIC_URL_BACKEND ?? ''
+
+    const res = await fetch(`${url_api}/auth/register`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: 'example',
+        email: 'example@email.com',
+        password: '123456',
+        phone: '306789076',
+      }),
+    })
+
+    const data = await res.json()
+
+    console.log(data)
   }
 
   return (
@@ -35,11 +55,14 @@ export default function FormRegister() {
             href='/'
             className=' items-center justify-center gap-1 mt-2 hidden md:flex'
           >
-            <img src={Logo.src} alt='' className='h-6 w-6' />
+            <Image src={logoPng} alt='' className='h-6 w-6' />
             <span className='text-[#8B8E99] text-2xl'>Lynx</span>
           </Link>
 
-          <form className='bg-[#F5F5F7] px-8 pt-6 mb-4'>
+          <form
+            className='bg-[#F5F5F7] px-8 pt-6 mb-4'
+            onSubmit={handleRegisterUser}
+          >
             <h3 className='mt-2 mb-4 text-[#8B8E99] font-semibold text-2xl text-center md:text-left'>
               SingUp
             </h3>

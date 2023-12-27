@@ -1,8 +1,11 @@
 'use client'
+
 import Link from 'next/link'
-import { navbar } from '@/lib/const'
-import Logo from '@/../public/logo.png'
+import Image from 'next/image'
 import { useState } from 'react'
+import { navbar } from '@/lib/const'
+import logoPng from 'public/logo.png'
+
 export default function Navbar() {
   const [isOpenMenuHamburger, setIsOpenMenuHamburger] = useState(false)
   const [isClosingMenu, setIsClosingMenu] = useState(false)
@@ -32,7 +35,7 @@ export default function Navbar() {
             href='/'
             className='flex items-center w-full justify-around sm:w-20 gap-1 '
           >
-            <img src={Logo.src} alt='' className='h-6 w-6 ' />
+            <Image src={logoPng} alt='' className='h-6 w-6 ' />
             <span className='text-[#8B8E99] hover:text-[#3858D6]'>Lynx</span>
           </Link>
         </div>
@@ -84,7 +87,7 @@ export default function Navbar() {
               href='/'
               className='flex gap-2 items-center absolute left-2 top-4'
             >
-              <img src={Logo.src} alt='' className='h-10 w-10' />
+              <Image src={logoPng} alt='' className='h-10 w-10' />
               <span className='text-[#8B8E99] text-lg'>Lynx</span>
             </Link>
             <button

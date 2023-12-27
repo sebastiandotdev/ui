@@ -5,7 +5,7 @@ type PropsButton = ButtonHTMLAttributes<HTMLButtonElement>
 // interface PropsDeInputs extends HTMLAttributes<HTMLInputElement>{
 // }
 
-export default function ButtonGoogle(props: PropsButton) {
+export function ButtonGoogle(props: PropsButton) {
   return (
     <button
       {...props}
