@@ -49,15 +49,7 @@ export default function FormRegister() {
 
   return (
     <>
-      <div className=' md:w-3/5 lg:w-2/5 mt-5 p-4 font-inter inline-block'>
-        <div className='border rounded-md border-[#e7e8ec] shadow-md'>
-          <Link
-            href='/'
-            className=' items-center justify-center gap-1 mt-2 hidden md:flex'
-          >
-            <Image src={logoPng} alt='' className='h-6 w-6' />
-            <span className='text-[#8B8E99] text-2xl'>Lynx</span>
-          </Link>
+      
 
           <form
             className='bg-[#F5F5F7] px-8 pt-6 mb-4'
@@ -75,7 +67,7 @@ export default function FormRegister() {
                 Username
               </label>
               <div className='relative'>
-                <Input type='text' name='username' placeholder='Jhon Doe' />
+                <Input type='text' name='username' id='username' placeholder='Jhon Doe' />
                 <IconUser />
               </div>
             </div>
@@ -90,6 +82,7 @@ export default function FormRegister() {
                 <Input
                   type='email'
                   name='email'
+                  id='email'
                   placeholder='example@gmail.com'
                 />
                 <IconEmail />
@@ -106,6 +99,7 @@ export default function FormRegister() {
                 <Input
                   type={showPassword ? 'text' : 'password'}
                   name='password'
+                  id='password'
                   placeholder='Enter your password'
                 />
                 <Password />
@@ -139,6 +133,7 @@ export default function FormRegister() {
                 <Input
                   type={showConfirmPassword ? 'text' : 'password'}
                   name='confirmPassword'
+                  id='confirPassword'
                   placeholder='Enter your password'
                 />
                 <Password />
@@ -172,6 +167,7 @@ export default function FormRegister() {
                 <Input
                   type='tel'
                   name='phoneNumber'
+                  id='phoneNumber'
                   placeholder='Enter your phone number'
                 />
                 <IconPhon />
@@ -206,8 +202,7 @@ export default function FormRegister() {
               <ButtonGoogle />
             </div>
           </form>
-        </div>
-      </div>
+        
     </>
   )
 }

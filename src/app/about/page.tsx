@@ -2,6 +2,8 @@
 
 import { infoAbout } from '@/lib/const'
 import { Network } from '@/components/icons'
+import iphoneIcon from 'public/about-iphone.png'
+import aboutProfile from 'public/about-profile.png'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
@@ -18,7 +20,7 @@ export default function About() {
         </h2>
         <div className='flex items-center justify-center gap-x-8 text-center my-6 w-max mx-auto'>
           <figure className='flex justify-center items-center gap-x-4'>
-            <Image src='/about-profile.png' alt='Teams Lynx cop' />
+            <Image src={aboutProfile} alt='Teams Lynx cop' />
             <figcaption className='font-semibold font-inter text-gray-dark'>
               Feyz ibrahim
             </figcaption>
@@ -33,7 +35,7 @@ export default function About() {
           sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.
         </h5>
         <figure className='w-full flex justify-center items-center my-6'>
-          <Image src='/about-iphone.png' alt='Lynx description tags dev' />
+          <Image src={iphoneIcon} alt='Lynx description tags dev' />
         </figure>
         <div className='flex  justify-center '>
           <div>
