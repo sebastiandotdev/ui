@@ -1,5 +1,8 @@
 import FormRegister from '@/components/form-register'
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
+import logoPng from 'public/logo.png'
 
 export const metadata: Metadata = {
   title: 'register',
@@ -8,7 +11,20 @@ export const metadata: Metadata = {
 export default function Register() {
   return (
     <>
-      <FormRegister />
+    <div className=' md:w-3/5 lg:w-2/5 mt-5 p-4 font-inter inline-block'>
+        <div className='border rounded-md border-[#e7e8ec] shadow-md'>
+          <Link
+            href='/'
+            className=' items-center justify-center gap-1 mt-2 hidden md:flex'
+          >
+            <Image src={logoPng} alt='' className='h-6 w-6' />
+            <span className='text-[#8B8E99] text-2xl'>Lynx</span>
+          </Link>
+          <FormRegister />
+          
+        </div>
+      </div>
+      
     </>
   )
 }

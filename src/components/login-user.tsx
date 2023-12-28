@@ -16,16 +16,7 @@ export default function LoginUser() {
 
   return (
     <>
-      <div className='w-full md:w-3/5 lg:w-2/5 mt-5 p-4 font-inter inline-block'>
-        <div className='border rounded-md border-[#e7e8ec] shadow-md'>
-          <Link
-            href='/'
-            className=' items-center justify-center gap-1 mt-2 hidden md:flex'
-          >
-            <Image src={logoPng} alt='' className='h-6 w-6' />
-            <span className='text-[#8B8E99] text-2xl'>Lynx</span>
-          </Link>
-
+      
           <form className='bg-[#F5F5F7] px-8 pt-6 mb-4'>
             <h3 className='mt-2 mb-4 text-[#8B8E99] font-semibold text-2xl text-center md:text-left'>
               Login
@@ -109,8 +100,7 @@ export default function LoginUser() {
               <ButtonGoogle />
             </div>
           </form>
-        </div>
-      </div>
+     
     </>
   )
 }
