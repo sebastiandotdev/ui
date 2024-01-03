@@ -5,7 +5,7 @@
   "scripts": {
     "fmt.check": "prettier --check .",
     "test.e2e": "playwright test",
-    "test.ci": "jest --ci",
+    "test.ci": "jest --ci --runInBand",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
