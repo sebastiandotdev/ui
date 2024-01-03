@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   /* border: 1px solid red; */
 }
 :root {
@@ -37,7 +37,11 @@ body {
   border: 1px solid #ffffff; /* Ajusta el ancho del borde de la barra de desplazamiento */
 }
 .gradient-left-to-right {
-  background: linear-gradient(90deg, rgba(245, 241, 241, 0.05) 0%, rgba(155, 151, 151, 0.199) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(245, 241, 241, 0.05) 0%,
+    rgba(155, 151, 151, 0.199) 100%
+  );
 }
 
 /* Animation Entrance Menu */
@@ -86,43 +90,42 @@ body {
 
 /* Animation Exit Menu  */
 .scale-out-tr {
-  -webkit-animation: scale-out-tr 0.9s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
-        animation: scale-out-tr 0.9s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+  -webkit-animation: scale-out-tr 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+  animation: scale-out-tr 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) both;
 }
 
 @-webkit-keyframes scale-out-tr {
-0% {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
-  opacity: 1;
-}
-100% {
-  -webkit-transform: scaleY(2);
-          transform: scaleY(2);
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
-  opacity: 0;
-}
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
 }
 @keyframes scale-out-tr {
-0% {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
-  opacity: 1;
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
 }
-100% {
-  -webkit-transform: scaleY(2);
-          transform: scaleY(2);
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
-  opacity: 0;
-}
-}
-
 
 .rotate-out {
   -webkit-animation: rotate-out 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
