@@ -55,13 +55,13 @@ export default defineConfig({
     //     ...devices['Desktop Firefox'],
     //   },
     // },
-    // {
-    //   name: 'Desktop Safari',
-    //   use: {
-    //     ...devices['Desktop Safari'],
-    //   },
-    // },
-    // Test against mobile viewports.
+    {
+      name: 'Desktop Safari',
+      use: {
+        ...devices['Desktop Safari'],
+      },
+    },
+
     {
       name: 'Mobile Chrome',
       use: {
