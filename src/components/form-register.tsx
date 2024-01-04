@@ -7,7 +7,7 @@ import {
   IconPhon,
   IconEmail,
 } from '@/components/icons'
-import { useState, type FormEvent } from 'react'
+import { useState, FormEvent } from 'react'
 import Link from 'next/link'
 import { ButtonGoogle, ButtonLogin, Input } from '@/components/ui'
 
@@ -22,9 +22,22 @@ export default function FormRegister() {
   const togglePasswordConfirmVisibility = () => {
     setShowConfirmPassword((showConfirmPassword) => !showConfirmPassword)
   }
+  const [user, setUser] = useState({
+    name: '',
+    email: '',
+    password: '',
+    phone: '',
+  })
+
+  const handleGetInputsValue = (key: string, value: string) => {
+    setUser((prev) => ({ ...prev, [key]: value }))
+  }
 
   const handleRegisterUser = async (e: FormEvent) => {
     e.preventDefault()
+    const form = e.target as HTMLFormElement
+    console.log(user)
+
     const url_api = process.env.NEXT_PUBLIC_URL_BACKEND ?? ''
 
     const res = await fetch(`${url_api}/auth/register`, {
@@ -33,10 +46,7 @@ export default function FormRegister() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name: 'example',
-        email: 'example@email.com',
-        password: '123456',
-        phone: '306789076',
+        ...user,
       }),
     })
 
