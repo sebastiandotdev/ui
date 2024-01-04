@@ -75,11 +75,9 @@ export default function FormRegister() {
           <div className='relative'>
             <Input
               type='text'
-              name='name'
+              name='username'
+              id='username'
               placeholder='Jhon Doe'
-              onChange={(e) =>
-                handleGetInputsValue('name', e.currentTarget.value)
-              }
             />
             <IconUser />
           </div>
@@ -92,10 +90,8 @@ export default function FormRegister() {
             <Input
               type='email'
               name='email'
+              id='email'
               placeholder='example@gmail.com'
-              onChange={(e) =>
-                handleGetInputsValue('email', e.currentTarget.value)
-              }
             />
             <IconEmail />
           </div>
@@ -111,10 +107,8 @@ export default function FormRegister() {
             <Input
               type={showPassword ? 'text' : 'password'}
               name='password'
+              id='password'
               placeholder='Enter your password'
-              onChange={(e) =>
-                handleGetInputsValue('password', e.currentTarget.value)
-              }
             />
             <Password />
             <button
@@ -147,6 +141,7 @@ export default function FormRegister() {
             <Input
               type={showConfirmPassword ? 'text' : 'password'}
               name='confirmPassword'
+              id='confirPassword'
               placeholder='Enter your password'
             />
             <Password />
@@ -179,11 +174,9 @@ export default function FormRegister() {
           <div className='relative'>
             <Input
               type='tel'
-              name='phone'
+              name='phoneNumber'
+              id='phoneNumber'
               placeholder='Enter your phone number'
-              onChange={(e) =>
-                handleGetInputsValue('phone', e.currentTarget.value)
-              }
             />
             <IconPhon />
           </div>
