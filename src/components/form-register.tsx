@@ -1,7 +1,5 @@
 'use client'
 
-import logoPng from 'public/logo.png'
-import Image from 'next/image'
 import {
   Password,
   IconEye,
