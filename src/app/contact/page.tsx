@@ -56,7 +56,7 @@ export default function Contact() {
           </div>
           <div>
             <InputsContac placeholder='Ibrahim' />
-            <InputsContac placeholder='+91 73569 88456' />
+            <InputsContac placeholder='+91 73569 88456 ' />
           </div>
         </div>
       </section>
