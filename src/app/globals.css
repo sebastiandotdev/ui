@@ -2,40 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  /* border: 1px solid red; */
-}
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  margin: 0px;
-  padding: 0px;
-}
-.text-balance {
-  text-wrap: balance;
-}
-
 ::-webkit-scrollbar {
-  width: 10px; /*Ajusta el ancho de la barra de desplazamiento */
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #2563eb;
   border-radius: 10px;
-  border: 1px solid #ffffff; /* Ajusta el ancho del borde de la barra de desplazamiento */
+  border: 1px solid #ffffff;
 }
+
 .gradient-left-to-right {
   background: linear-gradient(
     90deg,
@@ -44,7 +20,6 @@ body {
   );
 }
 
-/* Animation Entrance Menu */
 .scale-in-tr {
   -webkit-animation: scale-in-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: scale-in-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -55,22 +30,6 @@ body {
   animation: scale-out-tr 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@-webkit-keyframes scale-in-tr {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-    opacity: 1;
-  }
-}
 @keyframes scale-in-tr {
   0% {
     -webkit-transform: scale(0);
@@ -88,28 +47,11 @@ body {
   }
 }
 
-/* Animation Exit Menu  */
 .scale-out-tr {
   -webkit-animation: scale-out-tr 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) both;
   animation: scale-out-tr 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) both;
 }
 
-@-webkit-keyframes scale-out-tr {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(2);
-    transform: scaleY(2);
-    -webkit-filter: blur(4px);
-    filter: blur(4px);
-    opacity: 0;
-  }
-}
 @keyframes scale-out-tr {
   0% {
     -webkit-transform: scaleY(1);
@@ -130,17 +72,6 @@ body {
 .rotate-out {
   -webkit-animation: rotate-out 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: rotate-out 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes rotate-out {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(290deg);
-  }
 }
 
 @keyframes rotate-out {

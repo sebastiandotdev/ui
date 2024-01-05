@@ -19,7 +19,7 @@ const config: Config = {
       },
     },
     colors: {
-      gray: '#f5f5f7',
+      gray: '#F5F5F7',
       black: '#000000',
       white: '#FFFFFF',
       purple: '#3858D6',
