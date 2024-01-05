@@ -55,6 +55,7 @@ export default function Contact() {
             <InputsContac placeholder='Feyz' />
             <InputsContac placeholder='example@gmail.com' />
           </div>
+
           <div>
             <InputsContac placeholder='Ibrahim' />
             <InputsContac placeholder='+91 73569 88456' />
