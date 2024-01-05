@@ -76,7 +76,7 @@ export default function Navbar() {
       </nav>
 
       {/* Version Mobile   */}
-      {isOpenMenuHamburger ? && (
+      {isOpenMenuHamburger && (
         <div
           className={`fixed z-10 top-0 left-0 right-0 bottom-0 sm:hidden bg-black bg-opacity-20 bg-blend-darken ${
             isClosingMenu ? 'scale-out-tr' : 'scale-in-tr'
@@ -141,7 +141,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      )
+      )}
     </>
   )
 }
