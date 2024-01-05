@@ -64,7 +64,9 @@ export default function About() {
           <p className='italic w-full max-w-fit-content  md:p-8'>
             {'"'}Lorem ipsum dolor sit amet, consectetur adipiscing
           </p>
-          <p className='md:px-8 italic'>elit . Curabitur ac ultrices odio.{'"'}</p>
+          <p className='md:px-8 italic'>
+            elit . Curabitur ac ultrices odio.{'"'}
+          </p>
         </div>
 
         <article className=' flex  flex-col md:gap-11 py-10 max-w-5xl mx-auto'>
