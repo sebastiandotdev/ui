@@ -1,0 +1,21 @@
+{
+  "Import module (example)": {
+    "scope": "javascriptreact,typescriptreact,typescript,javascript",
+    "prefix": "imp",
+    "description": "This import module",
+    "body": ["import {$2} from '$1'"]
+  },
+
+  "Export module (example)": {
+    "scope": "javascriptreact,typescriptreact,typescript,javascript",
+    "prefix": "exp",
+    "description": "This export module",
+    "body": ["export {$2} from '$1'"]
+  },
+  "Console log (example)": {
+    "scope": "javascriptreact,typescriptreact,typescript,javascript",
+    "prefix": "clg",
+    "description": "This export module",
+    "body": ["console.log($1)"]
+  }
+}

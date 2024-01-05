@@ -12,8 +12,16 @@ import Link from 'next/link'
 import { ButtonGoogle, ButtonLogin, Input } from '@/components/ui'
 
 export default function FormRegister() {
-  const [showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false)
-  const [showPassword, setShowPassword] = useState<boolean>(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const [showPassword, setShowPassword] = useState(false)
+  const [user, setUser] = useState({
+    name: '',
+    email: '',
+    password: '',
+    phoneNumber: '',
+  })
+  const [messageEmail, setMessageEmail] = useState('') // Maneja estado de Email registrado
+  const [messagename, setMessageName] = useState('') // Maneja estado de name usuario
 
   const togglePasswordVisibility = () => {
     setShowPassword((showPassword) => !showPassword)
@@ -22,37 +30,42 @@ export default function FormRegister() {
   const togglePasswordConfirmVisibility = () => {
     setShowConfirmPassword((showConfirmPassword) => !showConfirmPassword)
   }
-  const [user, setUser] = useState({
-    name: '',
-    email: '',
-    password: '',
-    phone: '',
-  })
 
   const handleGetInputsValue = (key: string, value: string) => {
     setUser((prev) => ({ ...prev, [key]: value }))
+    setMessageEmail('')
+    setMessageName('')
   }
 
   const handleRegisterUser = async (e: FormEvent) => {
     e.preventDefault()
     const form = e.target as HTMLFormElement
     console.log(user)
+    if (user.name.length < 6) {
+      setMessageName('El nombre debe tener mas de 6 caracteres')
+    }
 
     const url_api = process.env.NEXT_PUBLIC_URL_BACKEND ?? ''
 
-    const res = await fetch(`${url_api}/auth/register`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        ...user,
-      }),
-    })
+    try {
+      const res = await fetch(`${url_api}/auth/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...user,
+        }),
+      })
 
-    const data = await res.json()
-
-    console.log(data)
+      const data = await res.json()
+      console.log(data)
+      if (data.message === 'Dear user, this email is already in use.') {
+        setMessageEmail('Este correo ya se encuentra registrado')
+      }
+    } catch (error) {
+      console.error('Error al procesar la solicitud:', error)
+    }
   }
 
   return (
@@ -78,9 +91,13 @@ export default function FormRegister() {
               name='username'
               id='username'
               placeholder='Jhon Doe'
+              onChange={(e) =>
+                handleGetInputsValue('name', e.currentTarget.value)
+              }
             />
             <IconUser />
           </div>
+          {messagename && <div style={{ color: 'red' }}>{messagename}</div>}
         </div>
         <div className='mb-2 relative'>
           <label htmlFor='email' className='block text-[#8B8E99] text-xs mb-2'>
@@ -92,9 +109,13 @@ export default function FormRegister() {
               name='email'
               id='email'
               placeholder='example@gmail.com'
+              onChange={(e) =>
+                handleGetInputsValue('email', e.currentTarget.value)
+              }
             />
             <IconEmail />
           </div>
+          {messageEmail && <div style={{ color: 'red' }}>{messageEmail}</div>}
         </div>
         <div className='mb-2 relative'>
           <label
@@ -109,6 +130,9 @@ export default function FormRegister() {
               name='password'
               id='password'
               placeholder='Enter your password'
+              onChange={(e) =>
+                handleGetInputsValue('password', e.currentTarget.value)
+              }
             />
             <Password />
             <button
@@ -173,10 +197,13 @@ export default function FormRegister() {
           </label>
           <div className='relative'>
             <Input
-              type='tel'
+              type='text'
               name='phoneNumber'
               id='phoneNumber'
               placeholder='Enter your phone number'
+              onChange={(e) =>
+                handleGetInputsValue('phoneNumber', e.currentTarget.value)
+              }
             />
             <IconPhon />
           </div>
