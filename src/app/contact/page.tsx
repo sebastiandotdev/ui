@@ -3,6 +3,7 @@ import Image from 'next/image'
 import CircleOne from '@/../public/Ellipse.png'
 import CircleTwo from '@/../public/Ellipse2.png'
 import { Network } from '@/components/icons'
+import InputsContac  from '../../components/ui/inputs-contac'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <>
-      <section>
+      <section className='flex'>
         <article className='bg-black w-[35%] relative p-3'>
           <article className='text-white'>
             <h2 className='bolt text-[28px] mt-[5%]'>
@@ -48,6 +49,17 @@ export default function Contact() {
             />
           </div>
         </article>
+        
+              <div className='flex w-[50%]'>
+                <div>
+              <InputsContac placeholder='Feyz'/>
+              <InputsContac placeholder='example@gmail.com'/>
+              </div>
+              <div>
+              <InputsContac placeholder='Ibrahim' />
+              <InputsContac placeholder='+91 73569 88456'/>
+              </div>
+              </div>
       </section>
     </>
   )
