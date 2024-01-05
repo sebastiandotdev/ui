@@ -49,13 +49,11 @@ export default function Contact() {
             />
           </div>
         </article>
-
         <div className='flex w-[50%]'>
           <div>
             <InputsContac placeholder='Feyz' />
             <InputsContac placeholder='example@gmail.com' name='Email' />
           </div>
-
           <div>
             <InputsContac placeholder='Ibrahim' />
             <InputsContac placeholder='+91 73569 88456' />
