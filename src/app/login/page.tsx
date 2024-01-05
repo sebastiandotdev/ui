@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Login() {
   return (
     <>
-    <div className='w-full md:w-3/5 lg:w-2/5 mt-5 p-4 font-inter inline-block'>
+      <div className='w-full md:w-3/5 lg:w-2/5 mt-5 p-4 font-inter inline-block'>
         <div className='border rounded-md border-[#e7e8ec] shadow-md'>
           <Link
             href='/'
@@ -22,7 +22,6 @@ export default function Login() {
           <FormLoginUser />
         </div>
       </div>
-      
     </>
   )
 }
