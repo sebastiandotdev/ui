@@ -3,8 +3,8 @@ import Image from 'next/image'
 import CircleOne from '@/../public/Ellipse.png'
 import CircleTwo from '@/../public/Ellipse2.png'
 import { Network } from '@/components/icons'
-import InputsContac from '../../components/ui/inputs-contac'
 import type { Metadata } from 'next'
+import { Input } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -51,12 +51,12 @@ export default function Contact() {
         </article>
         <div className='flex w-[50%]'>
           <div>
-            <InputsContac placeholder='Feyz' />
-            <InputsContac placeholder='example@gmail.com' name='Email' />
+            <Input placeholder='Feyz' />
+            <Input placeholder='example@gmail.com' name='Email' />
           </div>
           <div>
-            <InputsContac placeholder='Ibrahim' />
-            <InputsContac placeholder='+91 73569 88456 ' />
+            <Input placeholder='Ibrahim' />
+            <Input placeholder='+91 73569 88456 ' />
           </div>
         </div>
       </section>
