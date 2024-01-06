@@ -8,7 +8,7 @@ function total(a: number) {
 
 /** es tu test */ /**esta funcion ejecuta la logica de tu test */
 
-// testing unitarios que la funcion hace el trabajo correcto
+/** testing unitarios que la funcion hace el trabajo correcto*/
 it('deberia darme el total', () => {
   const isTotal = total(1000)
 
