@@ -17,8 +17,9 @@ export function Network({
     <>
       <ul className={`flex gap-3 ${logocolum} `}>
         <Link
-          href='/'
+          href='https://facebook.com'
           className='w-14 h-14 p-3 flex justify-center items-center rounded-full border-[1px] border-gray-dark'
+          target='_blank'
         >
           <svg
             className={`rounded-sm ${colorfacebook} ${bgfacebook} bg-white `}
