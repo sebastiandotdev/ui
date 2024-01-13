@@ -10,25 +10,38 @@ import {
 import { useState, FormEvent } from 'react'
 import Link from 'next/link'
 import { ButtonGoogle, ButtonLogin, Input } from '@/components/ui'
+import { Toaster, toast } from 'sonner'
 
 export default function FormRegister() {
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  const [showPassword, setShowPassword] = useState(false)
+  const [showIconConfirmPassword, setShowIconConfirmPassword] = useState(false)
+  const [showIconPassword, setShowIconPassword] = useState(false)
+  const [messageErrorPassword, setMessageErrorPassword] = useState('')
+  const [messageEmail, setMessageEmail] = useState('') // Maneja estado de Email registrado
+  const [messagename, setMessageName] = useState('') // Maneja estado de name usuario
+  const [messageErrorPhoneNumber, setMessageErroPhoneNumber] = useState('') // Maneja mesaje de error PhoneNumber
+  const [confirmPasswordValidation, setConfirmPasswordValidation] = useState({
+    confirmPassword: '',
+  })
+
   const [user, setUser] = useState({
     name: '',
     email: '',
     password: '',
     phoneNumber: '',
   })
-  const [messageEmail, setMessageEmail] = useState('') // Maneja estado de Email registrado
-  const [messagename, setMessageName] = useState('') // Maneja estado de name usuario
 
   const togglePasswordVisibility = () => {
-    setShowPassword((showPassword) => !showPassword)
+    setShowIconPassword(!showIconPassword)
   }
 
   const togglePasswordConfirmVisibility = () => {
-    setShowConfirmPassword((showConfirmPassword) => !showConfirmPassword)
+    setShowIconConfirmPassword(!showIconConfirmPassword)
+  }
+
+  // Stores the input values Confirm Password
+  const handleGetInputConfimPassword = (key: string, value: string) => {
+    setConfirmPasswordValidation((prev) => ({ ...prev, [key]: value }))
+    setMessageName('')
   }
 
   const handleGetInputsValue = (key: string, value: string) => {
@@ -41,9 +54,6 @@ export default function FormRegister() {
     e.preventDefault()
     const form = e.target as HTMLFormElement
     console.log(user)
-    if (user.name.length < 6) {
-      setMessageName('El nombre debe tener mas de 6 caracteres')
-    }
 
     const url_api = process.env.NEXT_PUBLIC_URL_BACKEND ?? ''
 
@@ -59,12 +69,59 @@ export default function FormRegister() {
       })
 
       const data = await res.json()
+
       console.log(data)
+
+      // Message email is alredy in use
       if (data.message === 'Dear user, this email is already in use.') {
-        setMessageEmail('Este correo ya se encuentra registrado')
+        setMessageEmail('Dear user, this email is already in use.')
+      }
+
+      // Validation UserName
+
+      if (user.name.length < 6) {
+        setMessageName('The username must be more than 6 characters')
+      } else if (/\d/.test(user.name)) {
+        setMessageName('The username cannot contain numbers.')
+      } else {
+        setMessageName('')
+      }
+
+      // Validation PASSWORD
+
+      if (user.password !== confirmPasswordValidation.confirmPassword) {
+        setMessageErrorPassword('Passwords do not match.')
+        return
+      } else {
+        setMessageErrorPassword('')
+      }
+
+      const regex =
+        /^(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])(?=.*[A-Z]).{8,}$/
+      if (!regex.test(user.password)) {
+        setMessageErrorPassword(
+          'The password must contain a special character, an uppercase letter, and be at least 8 characters long.',
+        )
+        return
+      } else {
+        setMessageErrorPassword('')
+      }
+
+      // Validation phoneNumber
+
+      const phoneRegex = /^(?:\+\d{1,3})?(?:\d{1,10})$/
+
+      if (!phoneRegex.test(user.phoneNumber)) {
+        setMessageErroPhoneNumber(
+          'Invalid phone number , example +57 3003211234',
+        )
+        console.log(user.phoneNumber)
+        return
+      } else {
+        setMessageErroPhoneNumber('')
       }
     } catch (error) {
-      console.error('Error al procesar la solicitud:', error)
+      console.error('Error processing the request', error)
     }
   }
 
@@ -97,7 +154,11 @@ export default function FormRegister() {
             />
             <IconUser />
           </div>
-          {messagename && <div style={{ color: 'red' }}>{messagename}</div>}
+          {messagename && (
+            <div style={{ color: 'red', fontSize: '10px', padding: '4px' }}>
+              {messagename}
+            </div>
+          )}
         </div>
         <div className='mb-2 relative'>
           <label htmlFor='email' className='block text-[#8B8E99] text-xs mb-2'>
@@ -115,7 +176,11 @@ export default function FormRegister() {
             />
             <IconEmail />
           </div>
-          {messageEmail && <div style={{ color: 'red' }}>{messageEmail}</div>}
+          {messageEmail && (
+            <div style={{ color: 'red', fontSize: '10px', padding: '4px' }}>
+              {messageEmail}
+            </div>
+          )}
         </div>
         <div className='mb-2 relative'>
           <label
@@ -126,7 +191,7 @@ export default function FormRegister() {
           </label>
           <div className='relative'>
             <Input
-              type={showPassword ? 'text' : 'password'}
+              type={showIconPassword ? 'text' : 'password'}
               name='password'
               id='password'
               placeholder='Enter your password'
@@ -140,7 +205,7 @@ export default function FormRegister() {
               className='absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer'
               onClick={togglePasswordVisibility}
             >
-              {showPassword ? (
+              {showIconPassword ? (
                 <IconEye />
               ) : (
                 <svg height='15' width='15' viewBox='0 0 640 512'>
@@ -153,6 +218,11 @@ export default function FormRegister() {
             </button>
           </div>
         </div>
+        {messageErrorPassword && (
+          <div style={{ color: 'red', fontSize: '10px', padding: '4px' }}>
+            {messageErrorPassword}
+          </div>
+        )}
 
         <div className='mb-2 relative'>
           <label
@@ -163,10 +233,16 @@ export default function FormRegister() {
           </label>
           <div className='relative'>
             <Input
-              type={showConfirmPassword ? 'text' : 'password'}
+              type={showIconConfirmPassword ? 'text' : 'password'}
               name='confirmPassword'
-              id='confirPassword'
+              id='confirmPassword'
               placeholder='Enter your password'
+              onChange={(e) =>
+                handleGetInputConfimPassword(
+                  'confirmPassword',
+                  e.currentTarget.value,
+                )
+              }
             />
             <Password />
             <button
@@ -174,7 +250,7 @@ export default function FormRegister() {
               className='absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer'
               onClick={togglePasswordConfirmVisibility}
             >
-              {showConfirmPassword ? (
+              {showIconConfirmPassword ? (
                 <IconEye />
               ) : (
                 <svg height='15' width='15' viewBox='0 0 640 512'>
@@ -202,13 +278,18 @@ export default function FormRegister() {
               id='phoneNumber'
               placeholder='Enter your phone number'
               onChange={(e) =>
-                handleGetInputsValue('phoneNumber', e.currentTarget.value)
+                handleGetInputsValue(
+                  'phoneNumber',
+                  e.currentTarget.value.replace(/[^\d+]/g, ''),
+                )
               }
             />
             <IconPhon />
           </div>
         </div>
-
+        <div style={{ color: 'red', fontSize: '10px', padding: '4px' }}>
+          {messageErrorPhoneNumber}
+        </div>
         <div className='mb-2 mt-4 flex items-center justify-center font-semibold'>
           <Link href='/' className='text-[#2563EB] text-sm'>
             Forgot Password?
@@ -216,7 +297,7 @@ export default function FormRegister() {
         </div>
 
         <div className='mb-2'>
-          <ButtonLogin type='submit' />
+          <ButtonLogin type='submit'></ButtonLogin>
         </div>
         <div className='mb-2 mt-4 flex gap-2'>
           <p className='text-sm'>Already have an account?</p>
@@ -234,6 +315,7 @@ export default function FormRegister() {
           <ButtonGoogle />
         </div>
       </form>
+      <button onClick={() => toast('My first toast')}>Give me a toast</button>
     </>
   )
 }
