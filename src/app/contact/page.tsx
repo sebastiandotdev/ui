@@ -5,6 +5,7 @@ import CircleTwo from 'public/Ellipse2.png'
 import { Network } from '@/components/icons'
 import type { Metadata } from 'next'
 import { Input } from '@/components/ui'
+import Navbar from '@/components/navbar'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <>
+      <Navbar />
       <section className='flex'>
         <article className='bg-black w-[35%] relative p-3'>
           <article className='text-white'>

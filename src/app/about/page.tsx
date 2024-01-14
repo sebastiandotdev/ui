@@ -6,6 +6,7 @@ import iphoneIcon from 'public/about-iphone.png'
 import aboutProfile from 'public/about-profile.png'
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Navbar from '@/components/navbar'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
+      <Navbar />
       <section className='px-2 bg-gray min-h-screen mb-6'>
         <h2 className='mx-auto font-inter  text-6xl font-semibold text-gray-dark pt-32 block text-center'>
           About the ex.iphones.

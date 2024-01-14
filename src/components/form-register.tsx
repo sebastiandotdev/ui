@@ -10,7 +10,6 @@ import {
 import { useState, FormEvent } from 'react'
 import Link from 'next/link'
 import { ButtonGoogle, ButtonLogin, Input } from '@/components/ui'
-import { Toaster, toast } from 'sonner'
 
 export default function FormRegister() {
   const [showIconConfirmPassword, setShowIconConfirmPassword] = useState(false)
@@ -31,11 +30,13 @@ export default function FormRegister() {
   })
 
   const togglePasswordVisibility = () => {
-    setShowIconPassword(!showIconPassword)
+    setShowIconPassword((showIconPassword) => !showIconPassword)
   }
 
   const togglePasswordConfirmVisibility = () => {
-    setShowIconConfirmPassword(!showIconConfirmPassword)
+    setShowIconConfirmPassword(
+      (showIconConfirmPassword) => !showIconConfirmPassword,
+    )
   }
 
   // Stores the input values Confirm Password
@@ -315,7 +316,6 @@ export default function FormRegister() {
           <ButtonGoogle />
         </div>
       </form>
-      <button onClick={() => toast('My first toast')}>Give me a toast</button>
     </>
   )
 }
