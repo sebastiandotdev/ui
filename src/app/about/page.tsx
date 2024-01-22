@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <Navbar background="shadow-md shadow-gray-dark" />
+      <Navbar background='shadow-md shadow-gray-dark' />
       <section className='px-2 bg-gray min-h-screen mb-6'>
         <h2 className='mx-auto font-inter  text-6xl font-semibold text-gray-dark pt-32 block text-center'>
           About the ex.iphones.

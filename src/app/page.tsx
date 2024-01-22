@@ -2,12 +2,11 @@ import Navbar from '@/components/navbar'
 import { IconLupa } from '@/components/icons'
 
 export default function Home() {
-  
   return (
     <>
       <div className='bg-home bg-container w-full bg-no-repeat bg-left  md:bg-top lg:bg-center   '>
         <header>
-          <Navbar background="" />
+          <Navbar background='' />
         </header>
         <section className='text-white p-4 md:px-24 font-poppins'>
           <div className='w-full p-4 md:w-2/4  lg:w-2/5 flex flex-col  gap-6 lg:gap-10'>
@@ -15,11 +14,14 @@ export default function Home() {
               Discover Most Affordable Apple products
             </h1>
             <p className='text-[#8B8E99] text-base text-wrap font-bold leading-snug'>
-              Find the best, reliable and affordable Apple products here. We focus on the product quality. Here you can find all the products Apple ever made, even the ones they officially stopped selling. So why wait? Just order now!
+              Find the best, reliable and affordable Apple products here. We
+              focus on the product quality. Here you can find all the products
+              Apple ever made, even the ones they officially stopped selling. So
+              why wait? Just order now!
             </p>
             <div className='w-full   flex  md:flex-row items-center gap-2 md:gap-1 justify-around bg-white p-2 rounded-2xl'>
               <div className='flex items-center gap-4 w-full md:w-auto md:justify-center'>
-                <IconLupa  />
+                <IconLupa />
                 <input
                   type='text'
                   placeholder='Find the best product'

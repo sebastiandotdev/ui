@@ -7,10 +7,10 @@ import { navbar } from '@/lib/const'
 import logoPng from 'public/logo.png'
 
 type Props = {
-  background: string,
+  background: string
 }
 
-export default function Navbar( props : Props) {
+export default function Navbar(props: Props) {
   const [isOpenMenuHamburger, setIsOpenMenuHamburger] = useState(false)
   const [isClosingMenu, setIsClosingMenu] = useState(false)
 
@@ -30,9 +30,7 @@ export default function Navbar( props : Props) {
     <>
       {/* Version Tablets - Desktop  */}
       <nav
-        className={
-          `flex relative w-full h-[70px] bg-transparent ${props.background}  justify-around items-center font-poppins `
-        }
+        className={`flex relative w-full h-[70px] bg-transparent ${props.background}  justify-around items-center font-poppins `}
       >
         <div className='flex items-center w-2/3 sm:w-20 hover:animate-pulse'>
           <Link
