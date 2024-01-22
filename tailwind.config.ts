@@ -12,6 +12,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'home': 'url("../../public/bghome.png")',
       },
       fontFamily: {
         poppins: ['Poppins'],
@@ -26,6 +27,8 @@ const config: Config = {
       'gray-dark': '#8B8E99',
       'blue-dark': '#3858D6',
     },
+    
+
   },
   plugins: [],
 }
