@@ -6,7 +6,11 @@ import { useState } from 'react'
 import { navbar } from '@/lib/const'
 import logoPng from 'public/logo.png'
 
-export default function Navbar() {
+type Props = {
+  background: string,
+}
+
+export default function Navbar( props : Props) {
   const [isOpenMenuHamburger, setIsOpenMenuHamburger] = useState(false)
   const [isClosingMenu, setIsClosingMenu] = useState(false)
 
@@ -27,7 +31,7 @@ export default function Navbar() {
       {/* Version Tablets - Desktop  */}
       <nav
         className={
-          'flex relative w-full h-[70px] bg-transparent shadow-md shadow-gray-dark justify-around items-center font-poppins '
+          `flex relative w-full h-[70px] bg-transparent ${props.background}  justify-around items-center font-poppins `
         }
       >
         <div className='flex items-center w-2/3 sm:w-20 hover:animate-pulse'>
@@ -122,7 +126,7 @@ export default function Navbar() {
                 {data.title}
               </Link>
             ))}
-            <div className='font-semibold sm:flex gap-2 m-6'>
+            <div className='font-semibold flex gap-4 m-6'>
               <Link
                 href='/login'
                 className='text-[#8B8E99] hover:text-[#3858D6]'
