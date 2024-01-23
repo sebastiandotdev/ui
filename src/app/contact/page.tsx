@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <>
-      <Navbar />
+      <Navbar background='shadow-md shadow-gray-dark' />
       <section className='flex'>
         <article className='bg-black w-[35%] relative p-3'>
           <article className='text-white'>
