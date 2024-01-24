@@ -90,9 +90,9 @@ export default function Footer() {
               </section>
             </div>
             <div className='flex justify-center '>
-            <button className='bg-purple py-2 px-5 mt-[10px] font-semibold rounded-lg text-white max-w-max h-[44px]'>
-              Send Request
-            </button>
+              <button className='bg-purple py-2 px-5 mt-[10px] font-semibold rounded-lg text-white max-w-max h-[44px]'>
+                Send Request
+              </button>
             </div>
           </form>
           <p className='text-xs text-gray-dark'>Privacy</p>
