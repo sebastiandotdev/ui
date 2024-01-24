@@ -1,6 +1,19 @@
 import phoneCall from 'public/bxs_phone-call.png'
 import logoEmail from 'public/logo-email.png'
 import logoLocation from 'public/Location.png'
+import imgAccesories from 'public/img-accessories.png'
+import imgAirpods from 'public/img-airpods.png'
+import imgAirtags from 'public/img-airtags.png'
+import imgHomePod from 'public/img-homepod.png'
+import imgIpad from 'public/img-ipad.png'
+import imgIphone from 'public/img-iphone.png'
+import imgWatch from 'public/img-watch.png'
+import imgMac from 'public/img-mac.png'
+import iphoneSE from 'public/iphoneSE.png'
+import iphone13 from 'public/iphone13.png'
+import iphone14 from 'public/iphone14.png'
+import iphone14pro from 'public/iphone14pro.png'
+import { title } from 'process'
 
 export const infoAbout = [
   {
@@ -55,5 +68,67 @@ export const navbar = [
   {
     title: 'Contact',
     src: '/contact',
+  },
+]
+
+export const categories = [
+  {
+    title: 'Mac',
+    src: imgMac,
+  },
+  {
+    title: 'iPhone',
+    src: imgIphone,
+  },
+  {
+    title: 'iPad',
+    src: imgIpad,
+  },
+  {
+    title: 'Apple Watch',
+    src: imgWatch,
+  },
+  {
+    title: 'AirPods',
+    src: imgAirpods,
+  },
+  {
+    title: 'AirTog',
+    src: imgAirtags,
+  },
+  {
+    title: 'HomePod',
+    src: imgHomePod,
+  },
+  {
+    title: 'Accesories',
+    src: imgAccesories,
+  },
+]
+export const Newest = [
+  {
+    name: 'iphone SE',
+    src: iphoneSE,
+    price: 'From ₹30,000',
+  },
+  {
+    name: 'iphone 13',
+    src: iphone13,
+    price: 'From ₹59,000',
+  },
+  {
+    name: 'iphone 14',
+    src: iphone14,
+    price: 'From ₹69,000',
+  },
+  {
+    name: 'iphone 14 Pro',
+    src: iphone14pro,
+    price: 'From ₹79,000',
+  },
+  {
+    name: 'iphone SE',
+    src: iphoneSE,
+    price: 'From ₹59,000',
   },
 ]

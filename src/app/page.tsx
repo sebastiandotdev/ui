@@ -1,10 +1,13 @@
 import Navbar from '@/components/navbar'
+import Categories from '@/components/categories-section'
 import { IconLupa } from '@/components/icons'
+import OfertIphone from '@/components/ofert-iphone'
+import CaruselIphones from '@/components/carousel-iphones'
 
 export default function Home() {
   return (
     <>
-      <div className='bg-home bg-container w-full bg-no-repeat bg-left  md:bg-top lg:bg-center   '>
+      <div className='bg-home bg-container w-full bg-no-repeat bg-left  md:bg-top lg:bg-center lg:bg-cover   '>
         <header>
           <Navbar background='' />
         </header>
@@ -35,6 +38,17 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <section className='mb-4 relative'>
+        <Categories />
+      </section>
+      <section className='bg-black  px-6'>
+        <OfertIphone />
+      </section>
+      <section className='relative mb-4'>
+        <div className='absolute inset-y-0 z-10 left-0 w-1/12 md:w-[11%] bg-gradient-to-r from-white to-transparent '></div>
+        <div className='absolute inset-y-0 z-10 right-0 w-1/12 md:w-[11%] bg-gradient-to-l from-white to-transparent'></div>
+        <CaruselIphones />
+      </section>
     </>
   )
 }

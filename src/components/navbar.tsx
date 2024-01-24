@@ -55,13 +55,16 @@ export default function Navbar(props: Props) {
         </div>
 
         <div className='font-semibold hidden sm:flex gap-2'>
-          <a href='/login' className='text-[#8B8E99] hover:text-[#3858D6]'>
+          <Link href='/login' className='text-[#8B8E99] hover:text-[#3858D6]'>
             Login
-          </a>
+          </Link>
           <span className='text-[#8B8E99]'>|</span>
-          <a href='/register' className='text-[#8B8E99] hover:text-[#3858D6]'>
+          <Link
+            href='/register'
+            className='text-[#8B8E99] hover:text-[#3858D6]'
+          >
             Sign Up
-          </a>
+          </Link>
         </div>
 
         <button onClick={handleIsOpenMenuHamburger} className=' flex sm:hidden'>
