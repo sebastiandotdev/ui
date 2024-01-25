@@ -13,6 +13,12 @@ import iphoneSE from 'public/iphoneSE.png'
 import iphone13 from 'public/iphone13.png'
 import iphone14 from 'public/iphone14.png'
 import iphone14pro from 'public/iphone14pro.png'
+import wachtOne from '../../public/WatchOne.png'
+import wachtTwo from '../../public/WatchTwo.png'
+import wachtThree from '../../public/WatchThree.png'
+import wachtFour from '../../public/WatchOne.png'
+import wachtFive from '../../public/WatchTwo.png'
+import wachtSix from '../../public/WatchThree.png'
 import { title } from 'process'
 
 export const infoAbout = [
@@ -129,6 +135,33 @@ export const Newest = [
   {
     name: 'iphone SE',
     src: iphoneSE,
+    price: 'From ₹59,000',
+  },
+]
+export const Watch = [
+  {
+    name: 'Apple Watch 8',
+    src: wachtOne,
+    price: 'From ₹30,000',
+  },
+  {
+    name: 'Apple Watch SE',
+    src: wachtTwo,
+    price: 'From ₹59,000',
+  },
+  {
+    name: 'Apple Watch Ultra',
+    src: wachtThree,
+    price: 'From ₹69,000',
+  },
+  {
+    name: 'Apple Watch SE',
+    src: wachtFour,
+    price: 'From ₹79,000',
+  },
+  {
+    name: 'Apple Watch 8',
+    src: wachtFive,
     price: 'From ₹59,000',
   },
 ]

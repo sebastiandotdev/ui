@@ -3,6 +3,8 @@ import Categories from '@/components/categories-section'
 import { IconLupa } from '@/components/icons'
 import OfertIphone from '@/components/ofert-iphone'
 import CaruselIphones from '@/components/carousel-iphones'
+import AppleWatch from '@/components/apple-watch'
+import WathcCarousel from '@/components/watch-carosel'
 
 export default function Home() {
   return (
@@ -48,6 +50,13 @@ export default function Home() {
         <div className='absolute inset-y-0 z-10 left-0 w-1/12 md:w-[11%] bg-gradient-to-r from-white to-transparent '></div>
         <div className='absolute inset-y-0 z-10 right-0 w-1/12 md:w-[11%] bg-gradient-to-l from-white to-transparent'></div>
         <CaruselIphones />
+      </section>
+      <section className='p-[5px] relative'>
+        <div className='absolute inset-y-0 z-10 left-0 w-1/12 md:w-[11%] bg-gradient-to-r from-white to-transparent '></div>
+
+        <AppleWatch />
+        <WathcCarousel />
+        <div className='absolute inset-y-0 z-10 right-0 w-1/12 md:w-[11%] bg-gradient-to-l from-white to-transparent'></div>
       </section>
     </>
   )

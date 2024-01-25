@@ -1,5 +1,5 @@
 'use client'
-import { Newest } from '@/lib/const'
+import { Watch } from '@/lib/const'
 import Link from 'next/link'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
@@ -9,26 +9,28 @@ import { useCallback } from 'react'
 import arrowLeft from 'public/arrowleft.png'
 import arrowRight from 'public/arrowright.png'
 
-export default function CaruselIphones() {
+export default function WathcCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({}, [Autoplay()])
 
   const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
+    if (emblaApi) {
+      emblaApi.scrollPrev()
+      console.log('Scrolling to previous')
+    }
   }, [emblaApi])
 
   const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
+    if (emblaApi) {
+      emblaApi.scrollNext()
+      console.log('Scrolling to next')
+    }
   }, [emblaApi])
 
   return (
     <>
-      <h2 className=' text-center text-3xl md:text-5xl  m-10 font-bold'>
-        Newest ex.iphones. Collection
-      </h2>
-
       <article ref={emblaRef} className='overflow-hidden relative '>
         <div className='flex md:gap-4  lg:justify-center  relative'>
-          {Newest.map((data, index) => (
+          {Watch.map((data, index) => (
             <Link
               href={'/'}
               key={index}
