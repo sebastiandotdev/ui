@@ -6,7 +6,7 @@ import logoIphone from 'public/logo.png'
 export default function Footer() {
   return (
     <>
-      <footer className='relative bg-black w-full flex flex-wrap justify-evenly py-12 font-inter'>
+      <footer className='relative bg-black w-full flex flex-wrap justify-evenly py-[20px] font-inter'>
         <svg
           className='absolute top-0 bottom-0 right-0 h-full -z-10 font'
           viewBox='0 0 1440 638'
@@ -30,7 +30,7 @@ export default function Footer() {
             </linearGradient>
           </defs>
         </svg>
-        <section className='flex flex-col w-[80%] md:w-[392px] px-8 py-6 bg-[#17181C] justify-center items-start gap-7 rounded-2xl'>
+        <section className='flex flex-col w-[95%] md:w-[392px] px-5 py-5 bg-[#17181C] justify-center items-start gap-7 rounded-2xl'>
           <p className='text-blue-dark'>Feedback</p>
           <h2 className='text-white font-bold text-3xl'>
             <span className='text-white/40'>Seeking personalized support?</span>{' '}
@@ -39,11 +39,11 @@ export default function Footer() {
           <form className='w-full flex flex-col gap-3'>
             <div className='flex flex-col gap-2'>
               <label className='block text-gray-dark'>Email</label>
-              <section className='relative'>
+              <div className='relative'>
                 <input
                   type='email'
                   name='email'
-                  className='w-full icono-placeholder pl-9 pr-2 h-9 bg-transparent border-[1px] rounded-lg border-[#8B8E99] text-[#8B8E99]'
+                  className='w-full icono-placeholder pl-9 pr-2 h-[56px] bg-transparent border-[1px] rounded-lg border-[#8B8E99] text-[#8B8E99]'
                   placeholder='Example@email.com'
                 />
                 <svg
@@ -61,7 +61,7 @@ export default function Footer() {
                   <path d='M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z'></path>
                   <path d='M3 7l9 6l9 -6'></path>
                 </svg>
-              </section>
+              </div>
             </div>
             <div className='flex flex-col gap-2'>
               <label className='block text-gray-dark'>Username</label>
@@ -69,7 +69,7 @@ export default function Footer() {
                 <input
                   type='email'
                   name='email'
-                  className='w-full icono-placeholder pl-9 pr-2 h-9 bg-transparent border-[1px] rounded-lg border-gray-dark text-gray-dark'
+                  className='w-full icono-placeholder pl-9 pr-2 bg-transparent border-[1px] rounded-lg border-gray-dark text-gray-dark h-[56px]'
                   placeholder='Feyz Ibrahim'
                 />
                 <svg
@@ -89,17 +89,19 @@ export default function Footer() {
                 </svg>
               </section>
             </div>
-            <button className='bg-purple py-2 px-5 font-semibold rounded-lg text-white max-w-max'>
-              Send Request
-            </button>
+            <div className='flex justify-center '>
+              <button className='bg-purple py-2 px-5 mt-[10px] font-semibold rounded-lg text-white max-w-max h-[44px]'>
+                Send Request
+              </button>
+            </div>
           </form>
           <p className='text-xs text-gray-dark'>Privacy</p>
         </section>
-        <section className='w-[550px] flex justify-between flex-wrap'>
+        <section className='w-[550px] flex justify-between flex-wrap mt-[20px]'>
           <div className='w-full flex flex-col max-h-max justify-evenly md:w-[420px] gap-5'>
-            <section className='flex justify-center md:justify-start gap-6 flex-wrap'>
-              <figure className='w-48 text-center md:text-start'>
-                <h2 className='text-purple mb-4'>INFO</h2>
+            <article className='flex justify-center md:justify-start gap-6 flex-wrap'>
+              <article className='w-48 text-center md:text-start'>
+                <h2 className='text-purple '>INFO</h2>
                 <ul className='text-white'>
                   <li>Company</li>
                   <li>Products</li>
@@ -107,24 +109,24 @@ export default function Footer() {
                   <li>Services</li>
                   <li>Productions</li>
                 </ul>
-              </figure>
-              <figure className='w-48 text-center md:text-start'>
-                <h2 className='text-purple mb-4'>ABOUT US</h2>
+              </article>
+              <article className='w-48 text-center md:text-start'>
+                <h2 className='text-purple'>ABOUT US</h2>
                 <ul className='text-white'>
                   <li>Gellery</li>
                   <li>Technologies</li>
                   <li>Contacts</li>
                 </ul>
-              </figure>
-              <figure className='w-48 text-center md:text-start'>
-                <h2 className='text-purple mb-4'>CONTACT US</h2>
+              </article>
+              <article className='w-48 text-center md:text-start'>
+                <h2 className='text-purple'>CONTACT US</h2>
                 <ul className='text-white'>
                   <li>+91 73569 83827</li>
                   <li>help@exiphones.com</li>
                   <li>Calicut, KL, INDIA</li>
                 </ul>
-              </figure>
-            </section>
+              </article>
+            </article>
             <div className='w-full flex justify-center md:justify-start text-white'>
               <Network
                 bgfacebook='bg-white'
@@ -133,7 +135,7 @@ export default function Footer() {
               />
             </div>
           </div>
-          <figure className='w-full flex flex-col justify-center md:justify-between py-16 items-center md:items-end md:w-[105px]'>
+          <figure className='w-full flex flex-col justify-center md:justify-between m-[10px] items-center md:items-end md:w-[105px]'>
             <Image src={logoIphone} alt='Logo image' />
             <p className='text-[10px] text-gray-dark'>© 2023 — ex-iphones</p>
           </figure>
