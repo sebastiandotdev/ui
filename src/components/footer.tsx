@@ -6,7 +6,7 @@ import logoIphone from 'public/logo.png'
 export default function Footer() {
   return (
     <>
-      <footer className='relative bg-black w-full flex flex-wrap justify-evenly py-[20px] font-inter'>
+      <footer className='relative bg-black w-full flex flex-wrap justify-evenly py-[20px] font-inter items-center'>
         <svg
           className='absolute top-0 bottom-0 right-0 h-full -z-10 font'
           viewBox='0 0 1440 638'
