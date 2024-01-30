@@ -30,7 +30,7 @@ export default function Navbar(props: Props) {
     <>
       {/* Version Tablets - Desktop  */}
       <nav
-        className={`flex relative w-full h-[70px] bg-transparent ${props.background}  justify-around items-center font-poppins `}
+        className={`flex relative w-full h-[70px] bg-transparent ${props.background}  justify-around items-center  `}
       >
         <div className='flex items-center w-2/3 sm:w-20 hover:animate-pulse'>
           <Link
@@ -41,7 +41,7 @@ export default function Navbar(props: Props) {
             <span className='text-[#8B8E99] hover:text-[#3858D6]'>Lynx</span>
           </Link>
         </div>
-        <div className='gap-8 hidden sm:flex text-[#8B8E99] font-semibold font-inter'>
+        <div className='gap-8 hidden sm:flex text-[#8B8E99] font-semibold '>
           {navbar.map((data, index) => (
             <Link
               href={data.src}
@@ -87,7 +87,7 @@ export default function Navbar(props: Props) {
             isClosingMenu ? 'scale-out-tr' : 'scale-in-tr'
           }`}
         >
-          <div className=' flex flex-col text-2xl items-center justify-center font-semibold font-inter bg-white bg- w-full h-[100vh]'>
+          <div className=' flex flex-col text-2xl items-center justify-center font-semibold  bg-white bg- w-full h-[100vh]'>
             <Link
               href='/'
               className='flex gap-2 items-center absolute left-2 top-4'
@@ -120,7 +120,7 @@ export default function Navbar(props: Props) {
             {navbar.map((data, index) => (
               <Link
                 href={data.src}
-                className=' text-left font-inter m-6 text-[#8B8E99] hover:text-[#3858D6]'
+                className=' text-left  m-6 text-[#8B8E99] hover:text-[#3858D6]'
                 key={index}
                 onClick={handleIsOpenMenuHamburger}
               >

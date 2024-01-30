@@ -6,7 +6,7 @@ import FigureIphone from 'public/figure.png'
 export default function OfertIphone() {
   return (
     <>
-      <div className='flex flex-col items-center  gap-8 font-poppins '>
+      <div className='flex flex-col items-center  gap-8  '>
         <div className='text-white text-center mt-20'>
           <h2 className='text-4xl md:text-5xl font-bold'>Lynx.iphones.</h2>
           <p className='mt-6 text-sm md:text-base'>

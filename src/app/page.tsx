@@ -13,7 +13,7 @@ export default function Home() {
         <header>
           <Navbar background='' />
         </header>
-        <section className='text-white p-4 md:px-24 font-poppins'>
+        <section className='text-white p-4 md:px-24 '>
           <div className='w-full p-4 md:w-2/4  lg:w-2/5 flex flex-col  gap-6 lg:gap-10'>
             <h1 className='text-3xl text-wrap   md:text-[3rem] lg:text-[3.8rem]  font-bold leading-none'>
               Discover Most Affordable Apple products
