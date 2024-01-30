@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { navbar } from '@/lib/const'
-import logoPng from 'public/Logo.png'
+import logoPng from 'public/logo.png'
 
 type Props = {
   background: string
