@@ -14,10 +14,6 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         home: 'url("../../public/bghome.png")',
       },
-      fontFamily: {
-        poppins: ['Poppins'],
-        inter: ['Inter'],
-      },
     },
     colors: {
       gray: '#F5F5F7',
