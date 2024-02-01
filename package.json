@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "pages-build": "npx @cloudflare/next-on-pages",
+    "pages-build": "pnpm dlx @cloudflare/next-on-pages",
     "dev-server": "pnpm install --frozen-lockfile && pnpm run dev",
     "fmt-check": "prettier --check .",
     "test-e2e": "playwright test",
