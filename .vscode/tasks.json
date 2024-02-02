@@ -3,7 +3,7 @@
   "tasks": [
     {
       "type": "npm",
-      "script": "dev-server",
+      "script": "dev-vscode",
       "runOptions": {
         "runOn": "folderOpen"
       }

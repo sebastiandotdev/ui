@@ -1,5 +1,5 @@
 'use client'
-import { Watch } from '@/lib/const'
+import { Watch } from '@/utils/const'
 import Link from 'next/link'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'

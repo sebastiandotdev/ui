@@ -1,4 +1,4 @@
-import { contactInfo } from '@/lib/const'
+import { contactInfo } from '@/utils/const'
 import Image from 'next/image'
 import CircleOne from 'public/Ellipse.png'
 import CircleTwo from 'public/Ellipse2.png'

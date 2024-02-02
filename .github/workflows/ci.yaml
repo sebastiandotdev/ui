@@ -1,4 +1,4 @@
-name: Check Formatter and Linter
+name: Ci Actions with Github
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: ['main']
 
 jobs:
-  checked:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
