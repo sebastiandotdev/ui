@@ -11,7 +11,8 @@
     "lint": "next lint",
     "test": "jest --watch",
     "dev": "next dev",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "embla-carousel-autoplay": "8.0.0-rc20",
@@ -32,6 +33,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
+    "husky": "9.0.10",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "postcss": "8.4.33",
