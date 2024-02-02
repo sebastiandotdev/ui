@@ -5,7 +5,7 @@
   "scripts": {
     "dev-vscode": "pnpm install --frozen-lockfile && pnpm run dev",
     "fmt-check": "prettier --check .",
-    "prepare": "node ./husky/install.mjs",
+    "prepare": "husky",
     "test-ci": "jest --ci --runInBand",
     "build": "next build",
     "start": "next start",
