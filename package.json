@@ -5,14 +5,14 @@
   "scripts": {
     "dev-vscode": "pnpm install --frozen-lockfile && pnpm run dev",
     "fmt-check": "prettier --check .",
+    "prepare": "node --env-file ./husky/install.mjs",
     "test-ci": "jest --ci --runInBand",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest --watch",
     "dev": "next dev",
-    "fmt": "prettier --write .",
-    "prepare": "husky"
+    "fmt": "prettier --write ."
   },
   "dependencies": {
     "embla-carousel-autoplay": "8.0.0-rc20",
