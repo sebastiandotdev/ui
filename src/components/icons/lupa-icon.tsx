@@ -12,14 +12,14 @@ export function IconLupa() {
         stroke='#3858D6'
         stroke-width='2'
         stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeLinejoin='round'
       />
       <path
         d='M18.375 18.375L14.5688 14.5687'
         stroke='#3858D6'
         stroke-width='2'
         stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeLinejoin='round'
       />
     </svg>
   )

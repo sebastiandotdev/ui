@@ -1,5 +1,5 @@
 'use client'
-import { Newest } from '@/lib/const'
+import { Newest } from '@/utils/const'
 import Link from 'next/link'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
