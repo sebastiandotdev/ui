@@ -140,11 +140,6 @@ export const Newest = [
 ]
 export const Watch = [
   {
-    name: 'Apple Watch 8',
-    src: wachtOne,
-    price: 'From ₹30,000',
-  },
-  {
     name: 'Apple Watch SE',
     src: wachtTwo,
     price: 'From ₹59,000',
