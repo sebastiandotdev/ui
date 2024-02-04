@@ -157,6 +157,7 @@ export const Watch = [
   {
     name: 'Apple Watch Ultra',
     src: wachtThree,
+
     price: 'From ₹69,000',
   },
   {
@@ -197,5 +198,4 @@ export const Watch = [
     src: wachtFive,
     price: 'From ₹59,000',
   },
-  
 ]
