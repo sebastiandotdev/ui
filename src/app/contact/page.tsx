@@ -20,7 +20,7 @@ export default function Contact() {
       <Navbar background='shadow-md shadow-gray-dark' />
 
       <section className='flex flex-wrap justify-center gap-[50px] xl:p-[30px] lg:p-[30px] md:p-[20px] p-[10px] border-solid border-black '>
-        <article className='contact flex flex-wrap gap-[50px] rounded-[15px]'>
+        <article className='contact flex flex-wrap justify-center gap-[50px] rounded-[15px] sm:rounded-none xl:p-[0] md:p-[10px] lg:p-0 xl:w-auto lg:w-[100%] md:w-[100%] w-[100%]'>
           <article className='bg-black  xlw-[400px] lg:w-[400px]  w-[350px] md:w-[400px] relative p-3 sm:p-5 rounded-r-md'>
             <article className='text-white'>
               <h2 className='bolt text-[28px] mt-[5%]'>
