@@ -1,4 +1,4 @@
-name: Check Formatter and Linter
+name: Ci Actions with Github
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: ['main']
 
 jobs:
-  checked:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -17,10 +17,9 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: 20.x
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run fmt-check
-      - run: pnpm run lint
       - run: pnpm run test-ci

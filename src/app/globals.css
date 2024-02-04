@@ -1,14 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* *{
-  border: 1px solid white;
-} */
-html,
-body {
-  scroll-behavior: smooth;
-  font-family: 'onest-regular', sans-serif;
-}
 
 @font-face {
   font-family: 'onest-bold';
@@ -24,14 +16,10 @@ body {
   src: url('/fonts/Onest-Medium.ttf');
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #2563eb;
-  border-radius: 10px;
-  border: 1px solid #ffffff;
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: 'onest-regular', sans-serif;
 }
 
 .gradient-left-to-right {

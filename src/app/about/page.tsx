@@ -1,6 +1,6 @@
 // checked page
 
-import { infoAbout } from '@/lib/const'
+import { infoAbout } from '@/utils/const'
 import { Network } from '@/components/icons'
 import iphoneIcon from 'public/about-iphone.png'
 import aboutProfile from 'public/about-profile.png'
