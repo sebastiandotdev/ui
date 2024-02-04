@@ -160,6 +160,7 @@ export const Watch = [
     price: 'From ₹79,000',
   },
 
+  
   {
     name: 'Apple Watch 8',
     src: wachtFive,
