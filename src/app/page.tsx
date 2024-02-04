@@ -51,12 +51,12 @@ export default function Home() {
         <div className='absolute inset-y-0 z-10 right-0 w-1/12 md:w-[11%] bg-gradient-to-l from-white to-transparent'></div>
         <CaruselIphones />
       </section>
-      <section className='p-[5px] relative'>
-        <div className='absolute inset-y-0 z-10 left-0 w-1/12 md:w-[11%] bg-gradient-to-r from-white to-transparent '></div>
+      <section className='relative'>
+        <div className='absolute inset-y-0 z-[1] left-0 w-1/12 md:w-[11%] bg-gradient-to-r from-white to-transparent '></div>
 
         <AppleWatch />
         <WathcCarousel />
-        <div className='absolute inset-y-0 z-10 right-0 w-1/12 md:w-[11%] bg-gradient-to-l from-white to-transparent'></div>
+        <div className='absolute inset-y-0 z-3 right-0 w-1/12 md:w-[11%] bg-gradient-to-l from-white to-transparent'></div>
       </section>
     </>
   )

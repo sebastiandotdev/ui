@@ -155,13 +155,51 @@ export const Watch = [
     price: 'From ₹69,000',
   },
   {
+    name: 'Apple Watch Ultra',
+    src: wachtThree,
+    price: 'From ₹69,000',
+  },
+  {
     name: 'Apple Watch SE',
     src: wachtFour,
     price: 'From ₹79,000',
+  },
+
+  {
+    name: 'Apple Watch 8',
+    src: wachtFive,
+    price: 'From ₹59,000',
+  },
+  {
+    name: 'Apple Watch SE',
+    src: wachtTwo,
+    price: 'From ₹59,000',
   },
   {
     name: 'Apple Watch 8',
     src: wachtFive,
     price: 'From ₹59,000',
+  },
+
+  {
+    name: 'Apple Watch SE',
+    src: wachtTwo,
+    price: 'From ₹59,000',
+  },
+
+  {
+    name: 'Apple Watch Ultra',
+    src: wachtThree,
+    price: 'From ₹69,000',
+  },
+  {
+    name: 'Apple Watch 8',
+    src: wachtFive,
+    price: 'From ₹59,000',
+  },
+  {
+    name: 'Apple Watch Ultra',
+    src: wachtThree,
+    price: 'From ₹69,000',
   },
 ]
