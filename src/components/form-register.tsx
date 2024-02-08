@@ -10,6 +10,16 @@ import {
 import { useState, FormEvent } from 'react'
 import Link from 'next/link'
 import { ButtonGoogle, ButtonLogin, Input } from '@/components/ui'
+import { Toaster, toast } from 'sonner'
+
+function App() {
+  return (
+    <div>
+      <Toaster />
+      <button onClick={() => toast('My first toast')}>Give me a toast</button>
+    </div>
+  )
+}
 
 export default function FormRegister() {
   const [showIconConfirmPassword, setShowIconConfirmPassword] = useState(false)
@@ -26,7 +36,7 @@ export default function FormRegister() {
     name: '',
     email: '',
     password: '',
-    phoneNumber: '',
+    phone: '',
   })
 
   const togglePasswordVisibility = () => {
@@ -58,6 +68,38 @@ export default function FormRegister() {
 
     const url_api = process.env.NEXT_PUBLIC_URL_BACKEND ?? ''
 
+    // Validation UserName
+
+    if (user.name.length < 6) {
+      setMessageName('The username must be more than 6 characters')
+      return
+    } else if (/\d/.test(user.name)) {
+      setMessageName('The username cannot contain numbers.')
+      return
+    } else {
+      setMessageName('')
+    }
+
+    // Validation PASSWORD
+
+    if (user.password !== confirmPasswordValidation.confirmPassword) {
+      setMessageErrorPassword('Passwords do not match.')
+      return
+    } else {
+      setMessageErrorPassword('')
+    }
+
+    // Validartion Phone
+    const REGULARVALIDATIONEXPRESSIONNUMBER = /^[0-9]+$/
+    if (!REGULARVALIDATIONEXPRESSIONNUMBER.test(user.phone)) {
+      setMessageErroPhoneNumber(
+        'El usuario no puede contener caracteres, ejemplo: 3123840933',
+      )
+      return
+    } else {
+      setMessageErroPhoneNumber('')
+    }
+
     try {
       const res = await fetch(`${url_api}/auth/register`, {
         method: 'POST',
@@ -68,58 +110,13 @@ export default function FormRegister() {
           ...user,
         }),
       })
-
       const data = await res.json()
 
       console.log(data)
 
-      // Message email is alredy in use
-      if (data.message === 'Dear user, this email is already in use.') {
-        setMessageEmail('Dear user, this email is already in use.')
-      }
-
-      // Validation UserName
-
-      if (user.name.length < 6) {
-        setMessageName('The username must be more than 6 characters')
-      } else if (/\d/.test(user.name)) {
-        setMessageName('The username cannot contain numbers.')
-      } else {
-        setMessageName('')
-      }
-
-      // Validation PASSWORD
-
-      if (user.password !== confirmPasswordValidation.confirmPassword) {
-        setMessageErrorPassword('Passwords do not match.')
-        return
-      } else {
-        setMessageErrorPassword('')
-      }
-
-      const regex =
-        /^(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])(?=.*[A-Z]).{8,}$/
-      if (!regex.test(user.password)) {
-        setMessageErrorPassword(
-          'The password must contain a special character, an uppercase letter, and be at least 8 characters long.',
-        )
-        return
-      } else {
-        setMessageErrorPassword('')
-      }
-
-      // Validation phoneNumber
-
-      const phoneRegex = /^(?:\+\d{1,3})?(?:\d{1,10})$/
-
-      if (!phoneRegex.test(user.phoneNumber)) {
-        setMessageErroPhoneNumber(
-          'Invalid phone number , example +57 3003211234',
-        )
-        console.log(user.phoneNumber)
-        return
-      } else {
-        setMessageErroPhoneNumber('')
+      // Message errors
+      if (data.detail) {
+        toast(data.detail.message)
       }
     } catch (error) {
       console.error('Error processing the request', error)
@@ -135,7 +132,7 @@ export default function FormRegister() {
         <h3 className='mt-2 mb-4 text-[#8B8E99] font-semibold text-2xl text-center md:text-left'>
           SingUp
         </h3>
-
+        <Toaster position='top-right' />
         <div className='mb-2 relative'>
           <label
             htmlFor='username'
@@ -279,10 +276,7 @@ export default function FormRegister() {
               id='phoneNumber'
               placeholder='Enter your phone number'
               onChange={(e) =>
-                handleGetInputsValue(
-                  'phoneNumber',
-                  e.currentTarget.value.replace(/[^\d+]/g, ''),
-                )
+                handleGetInputsValue('phone', e.currentTarget.value)
               }
             />
             <IconPhon />
