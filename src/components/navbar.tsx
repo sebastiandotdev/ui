@@ -37,11 +37,11 @@ export default function Navbar(props: Props) {
             href='/'
             className='flex items-center w-full justify-around sm:w-20 gap-1 '
           >
-            <IconLogo />
-            <span className='text-white font-bold'>Lynx</span>
+           <IconLogo/>
+            <span className='text-[#8B8E99] font-semibold'>Lynx</span>
           </Link>
         </div>
-        <div className='gap-8 hidden sm:flex text-white font-semibold '>
+        <div className='gap-8 hidden sm:flex text-[#8B8E99] font-semibold '>
           {navbar.map((data, index) => (
             <Link
               href={data.src}
@@ -55,11 +55,14 @@ export default function Navbar(props: Props) {
         </div>
 
         <div className='font-semibold hidden sm:flex gap-2'>
-          <Link href='/login' className='text-white hover:text-[#3858D6]'>
+          <Link href='/login' className='text-[#8B8E99] hover:text-[#3858D6]'>
             Login
           </Link>
           <span className='text-[#8B8E99]'>|</span>
-          <Link href='/register' className='text-white hover:text-[#3858D6]'>
+          <Link
+            href='/register'
+            className='text-[#8B8E99] hover:text-[#3858D6]'
+          >
             Sign Up
           </Link>
         </div>
