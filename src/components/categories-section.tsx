@@ -5,8 +5,7 @@ import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { useCallback } from 'react'
-import arrowLeft from 'public/arrowleft.png'
-import arrowRight from 'public/arrowright.png'
+import { IconArrowLeft, IconArrowRight } from './icons'
 
 export default function CategoriesSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({}, [Autoplay()])
@@ -24,13 +23,13 @@ export default function CategoriesSection() {
         Newest Collection Available
       </h2>
 
-      <article ref={emblaRef} className='overflow-hidden'>
-        <div className='flex gap-4 lg:justify-center '>
+      <article ref={emblaRef} className='overflow-hidden mt-10  relative'>
+        <div className='flex gap-2 lg:justify-between mb-10 mt-10 '>
           {categories.map((data, index) => (
             <Link
               href={'/'}
               key={index}
-              className=' shrink-0 snap-start hover:scale-110 text-center bg-white p-4 rounded-md drop-shadow-lg transition-transform ease-in-out duration-500'
+              className=' shrink-0 snap-start hover:scale-105 text-center bg-white p-4 rounded-md drop-shadow-lg transition-transform ease-in-out duration-500'
             >
               <Image
                 src={data.src}
@@ -42,16 +41,16 @@ export default function CategoriesSection() {
           ))}
         </div>
         <button
-          className='embla__prev absolute top-36 md:top-28  lg:top-28'
+          className='embla__prev absolute top-0  left-10 md:right-16 md:left-auto  lg:hidden'
           onClick={scrollPrev}
         >
-          <Image src={arrowLeft} alt='arrow left' className='w-10 md:w-16 ' />
+          <IconArrowLeft />
         </button>
         <button
-          className='embla__next  absolute top-36  right-0 md:top-28 lg:top-28'
+          className='embla__next  absolute top-0 left-20 md:right-8 md:left-auto lg:hidden'
           onClick={scrollNext}
         >
-          <Image src={arrowRight} alt='arrow Right' className='w-10 md:w-16' />
+          <IconArrowRight />
         </button>
       </article>
     </>
