@@ -2,7 +2,7 @@ export function IconLogo() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='icon icon-tabler icon-tabler-flame text-white'
+      className='icon icon-tabler icon-tabler-flame text-[#8B8E99]'
       width='24'
       height='24'
       viewBox='0 0 24 24'
