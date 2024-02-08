@@ -137,6 +137,31 @@ export const Newest = [
     src: iphoneSE,
     price: 'From ₹59,000',
   },
+  {
+    name: 'iphone SE',
+    src: iphoneSE,
+    price: 'From ₹30,000',
+  },
+  {
+    name: 'iphone 13',
+    src: iphone13,
+    price: 'From ₹59,000',
+  },
+  {
+    name: 'iphone 14',
+    src: iphone14,
+    price: 'From ₹69,000',
+  },
+  {
+    name: 'iphone 14 Pro',
+    src: iphone14pro,
+    price: 'From ₹79,000',
+  },
+  {
+    name: 'iphone SE',
+    src: iphoneSE,
+    price: 'From ₹59,000',
+  },
 ]
 export const Watch = [
   {
@@ -160,7 +185,6 @@ export const Watch = [
     price: 'From ₹79,000',
   },
 
-  
   {
     name: 'Apple Watch 8',
     src: wachtFive,

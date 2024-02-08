@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { navbar } from '@/utils/const'
 import logoPng from 'public/logo.png'
-
+import { IconLogo } from './icons'
 type Props = {
   background: string
 }
@@ -37,8 +37,8 @@ export default function Navbar(props: Props) {
             href='/'
             className='flex items-center w-full justify-around sm:w-20 gap-1 '
           >
-            <Image src={logoPng} alt='' className='h-6 w-6 ' />
-            <span className='text-[#8B8E99] hover:text-[#3858D6]'>Lynx</span>
+            <IconLogo />
+            <span className='text-[#8B8E99] font-semibold'>Lynx</span>
           </Link>
         </div>
         <div className='gap-8 hidden sm:flex text-[#8B8E99] font-semibold '>
