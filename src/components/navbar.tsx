@@ -37,7 +37,7 @@ export default function Navbar(props: Props) {
             href='/'
             className='flex items-center w-full justify-around sm:w-20 gap-1 '
           >
-           <IconLogo/>
+            <IconLogo />
             <span className='text-[#8B8E99] font-semibold'>Lynx</span>
           </Link>
         </div>
