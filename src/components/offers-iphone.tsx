@@ -3,9 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import FigureIphone from 'public/figure.png'
 
-export default function OfertIphone() {
+export default function OffersIphone() {
   return (
-    <>
+    <section className='bghomegradient  px-6 relative'>
       <div className='flex flex-col items-center  gap-8  '>
         <div className='text-white text-center mt-20'>
           <h2 className='text-4xl md:text-5xl font-bold'>Lynx.iphones.</h2>
@@ -29,6 +29,6 @@ export default function OfertIphone() {
           className='object-fill shadow-sm rounded-lg   lg:w-[60.063rem] lg:h-[24.563rem]'
         />
       </div>
-    </>
+    </section>
   )
 }
