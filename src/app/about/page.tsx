@@ -2,7 +2,7 @@
 
 import { infoAbout } from '@/utils/const'
 import { Network } from '@/components/icons'
-import iphoneIcon from 'public/about-iphone.png'
+import iphoneIcon from 'public/bgInfo.png'
 import aboutProfile from 'public/about-profile.png'
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -16,10 +16,13 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <Navbar background='shadow-md shadow-gray-dark' />
+      <Navbar
+        background='shadow-md shadow-gray-dark'
+        textColor='text-gray-dark'
+      />
       <section className='px-2 bg-gray min-h-screen mb-6'>
         <h2 className='mx-auto   text-6xl font-semibold text-gray-dark pt-32 block text-center'>
-          About the ex.iphones.
+          About the Lynx.
         </h2>
         <div className='flex items-center justify-center gap-x-8 text-center my-6 w-max mx-auto'>
           <figure className='flex justify-center items-center gap-x-4'>
@@ -38,7 +41,11 @@ export default function About() {
           sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.
         </h5>
         <figure className='w-full flex justify-center items-center my-6'>
-          <Image src={iphoneIcon} alt='Lynx description tags dev' />
+          <Image
+            src={iphoneIcon}
+            alt='Lynx description tags dev'
+            className='border rounded-2xl h-2/3'
+          />
         </figure>
         <div className='flex  justify-center '>
           <div>

@@ -8,6 +8,7 @@ import logoPng from 'public/logo.png'
 import { IconLogo } from './icons'
 type Props = {
   background: string
+  textColor: string
 }
 
 export default function Navbar(props: Props) {
@@ -30,22 +31,24 @@ export default function Navbar(props: Props) {
     <>
       {/* Version Tablets - Desktop  */}
       <nav
-        className={`flex relative w-full h-[70px] bg-transparent ${props.background}  justify-around items-center  `}
+        className={`flex relative w-full h-[70px] bg-contain bg-transparent ${props.background}  justify-around items-center  `}
       >
-        <div className='flex items-center w-2/3 sm:w-20 hover:animate-pulse'>
+        <div className='flex items-center w-2/3 sm:w-20 '>
           <Link
             href='/'
             className='flex items-center w-full justify-around sm:w-20 gap-1 '
           >
             <IconLogo />
-            <span className='text-[#8B8E99] font-semibold'>Lynx</span>
+            <span className={`${props.textColor} font-semibold `}>Lynx</span>
           </Link>
         </div>
-        <div className='gap-8 hidden sm:flex text-[#8B8E99] font-semibold '>
+        <div
+          className={`gap-8 hidden sm:flex ${props.textColor}  font-semibold`}
+        >
           {navbar.map((data, index) => (
             <Link
               href={data.src}
-              className=' hover:text-[#3858D6]'
+              className='relative group'
               key={index}
               onClick={() => setIsClosingMenu(true)}
             >
@@ -54,15 +57,12 @@ export default function Navbar(props: Props) {
           ))}
         </div>
 
-        <div className='font-semibold hidden sm:flex gap-2'>
-          <Link href='/login' className='text-[#8B8E99] hover:text-[#3858D6]'>
+        <div className='font-semibold hidden sm:flex gap-2 '>
+          <Link href='/login' className={`${props.textColor}`}>
             Login
           </Link>
-          <span className='text-[#8B8E99]'>|</span>
-          <Link
-            href='/register'
-            className='text-[#8B8E99] hover:text-[#3858D6]'
-          >
+          <span className={`${props.textColor}`}>|</span>
+          <Link href='/register' className={`${props.textColor}`}>
             Sign Up
           </Link>
         </div>

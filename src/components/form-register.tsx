@@ -126,7 +126,7 @@ export default function FormRegister() {
   return (
     <>
       <form
-        className='bg-[#F5F5F7] px-8 pt-6 mb-4'
+        className='bg-[#F5F5F7] px-8 pt-6 mb-4 '
         onSubmit={handleRegisterUser}
       >
         <h3 className='mt-2 mb-4 text-[#8B8E99] font-semibold text-2xl text-center md:text-left'>
