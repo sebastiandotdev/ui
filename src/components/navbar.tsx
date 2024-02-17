@@ -7,7 +7,7 @@ import { navbar } from '@/utils/const'
 import logoPng from 'public/logo.png'
 import { IconLogo } from './icons'
 type Props = {
-  background: string
+  background?: string
   textColor: string
 }
 

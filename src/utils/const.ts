@@ -3,12 +3,11 @@ import logoEmail from 'public/logo-email.png'
 import logoLocation from 'public/Location.png'
 import imgAccesories from 'public/img-accessories.png'
 import imgAirpods from 'public/img-airpods.png'
-import imgAirtags from 'public/img-airtags.png'
 import imgHomePod from 'public/img-homepod.png'
 import imgIpad from 'public/img-ipad.png'
-import imgIphone from 'public/img-iphone.png'
+import imgIphone from 'public/png/categorie-iphone.png'
 import imgWatch from 'public/img-watch.png'
-import imgLaptops from 'public/img-laptops.png'
+import imgLaptops from 'public/png/categorie-mac.png'
 import iphoneSE from 'public/iphoneSE.png'
 import iphone13 from 'public/iphone13.png'
 import iphone14 from 'public/iphone14.png'
@@ -105,56 +104,56 @@ export const categories = [
     src: imgAccesories,
   },
 ]
-export const Newest = [
+export const newest = [
   {
     name: 'iphone SE',
     src: iphoneSE,
-    price: 'From ₹30,000',
+    price: '$30,000',
   },
   {
     name: 'iphone 13',
     src: iphone13,
-    price: 'From ₹59,000',
+    price: '$59,000',
   },
   {
     name: 'iphone 14',
     src: iphone14,
-    price: 'From ₹69,000',
+    price: '$69,000',
   },
   {
     name: 'iphone 14 Pro',
     src: iphone14pro,
-    price: 'From ₹79,000',
+    price: '$79,000',
   },
   {
     name: 'iphone SE',
     src: iphoneSE,
-    price: 'From ₹59,000',
+    price: '$59,000',
   },
   {
     name: 'iphone SE',
     src: iphoneSE,
-    price: 'From ₹30,000',
+    price: '$30,000',
   },
   {
     name: 'iphone 13',
     src: iphone13,
-    price: 'From ₹59,000',
+    price: '$59,000',
   },
   {
     name: 'iphone 14',
     src: iphone14,
-    price: 'From ₹69,000',
+    price: '$69,000',
   },
   {
     name: 'iphone 14 Pro',
     src: iphone14pro,
-    price: 'From ₹79,000',
+    price: '$79,000',
   },
   {
     name: 'iphone SE',
     src: iphoneSE,
-    price: 'From ₹59,000',
+    price: '$59,000',
   },
 ]
 export const Watch = [
