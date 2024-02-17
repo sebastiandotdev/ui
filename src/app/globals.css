@@ -21,13 +21,29 @@ body {
   scroll-behavior: smooth;
   font-family: 'onest-regular', sans-serif;
 }
-
-.gradient-left-to-right {
+.bghomegradient {
   background: linear-gradient(
-    90deg,
-    rgba(245, 241, 241, 0.05) 0%,
-    rgba(155, 151, 151, 0.199) 100%
+    to right,
+    rgb(15, 32, 39),
+    rgb(32, 58, 67),
+    rgb(44, 83, 100)
   );
+}
+
+@keyframes flameAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flame {
+  animation: flameAnimation 1s ease-in-out infinite;
 }
 
 .scale-in-tr {

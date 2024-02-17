@@ -24,7 +24,7 @@ export default function CategoriesSection() {
       </h2>
 
       <article ref={emblaRef} className='overflow-hidden mt-10  relative'>
-        <div className='flex gap-2 lg:justify-between mb-10 mt-10 '>
+        <div className='flex  lg:justify-between mb-10 mt-10 '>
           {categories.map((data, index) => (
             <Link
               href={'/'}
@@ -34,7 +34,7 @@ export default function CategoriesSection() {
               <Image
                 src={data.src}
                 alt={`Imagen de ${data.title}`}
-                className='w-32 h-20 rounded-md mb-2 object-contain'
+                className='w-32 h-24 rounded-md mb-2 object-cover'
               />
               <p className='text-sm font-bold'>{data.title}</p>
             </Link>

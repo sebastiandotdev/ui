@@ -15,7 +15,7 @@ export function ButtonBuy(props: PropsDeButton) {
   return (
     <button
       {...props}
-      className={`bg-[#2563EB] text-white ${props.padding}  font-bold rounded  hover:bg-[#2055c6]`}
+      className={`bg-[#1c4060] text-white ${props.padding}  font-bold rounded  hover:bg-[#2a4054] shadow-xl`}
     >
       {' '}
       Buy

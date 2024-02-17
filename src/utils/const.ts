@@ -8,22 +8,20 @@ import imgHomePod from 'public/img-homepod.png'
 import imgIpad from 'public/img-ipad.png'
 import imgIphone from 'public/img-iphone.png'
 import imgWatch from 'public/img-watch.png'
-import imgMac from 'public/img-mac.png'
+import imgLaptops from 'public/img-laptops.png'
 import iphoneSE from 'public/iphoneSE.png'
 import iphone13 from 'public/iphone13.png'
 import iphone14 from 'public/iphone14.png'
 import iphone14pro from 'public/iphone14pro.png'
-import wachtOne from '../../public/WatchOne.png'
+
 import wachtTwo from '../../public/WatchTwo.png'
 import wachtThree from '../../public/WatchThree.png'
 import wachtFour from '../../public/WatchOne.png'
 import wachtFive from '../../public/WatchTwo.png'
-import wachtSix from '../../public/WatchThree.png'
-import { title } from 'process'
 
 export const infoAbout = [
   {
-    title: 'Who ex.iphones. started',
+    title: 'Who Lynx.phones. started',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar. Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.',
   },
@@ -33,7 +31,7 @@ export const infoAbout = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar. Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.',
   },
   {
-    title: 'Future of ex.iphones.',
+    title: 'Future of Lynx.phones.',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar. Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.',
   },
@@ -57,7 +55,7 @@ export const contactInfo = [
   },
   {
     src: logoLocation,
-    text: '7th Avenue, KL ex.iphones. park, Calicut',
+    text: '7th Avenue, KL Lynx.phones. park, Calicut',
     alt: 'logo location',
   },
 ]
@@ -79,31 +77,27 @@ export const navbar = [
 
 export const categories = [
   {
-    title: 'Mac',
-    src: imgMac,
+    title: 'Laptops',
+    src: imgLaptops,
   },
   {
-    title: 'iPhone',
+    title: 'Phones',
     src: imgIphone,
   },
   {
-    title: 'iPad',
+    title: 'Tablets',
     src: imgIpad,
   },
   {
-    title: 'Apple Watch',
+    title: '´Smart Watches',
     src: imgWatch,
   },
   {
-    title: 'AirPods',
+    title: 'Headphones',
     src: imgAirpods,
   },
   {
-    title: 'AirTog',
-    src: imgAirtags,
-  },
-  {
-    title: 'HomePod',
+    title: 'Power Banks',
     src: imgHomePod,
   },
   {

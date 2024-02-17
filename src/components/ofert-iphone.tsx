@@ -16,14 +16,17 @@ export default function OfertIphone() {
 
         <div className='flex md:w-1/3 justify-center  items-center gap-4 mb-10'>
           <ButtonBuy padding='px-8 py-2' />
-          <Link href={'/'} className='text-[#2563EB] hover:text-[#2055c6]'>
-            Learn More
+          <Link
+            href={'/'}
+            className='text-white  bg-[#1c4060] rounded-lg px-4 py-2 hover:px-6  hover:bg-[#2a4054] transition-all duration-500 ease-in-out'
+          >
+            Learn More...
           </Link>
         </div>
         <Image
           src={FigureIphone}
           alt='Figure Iphone'
-          className='object-cover   lg:w-[60.063rem] lg:h-[24.563rem]'
+          className='object-fill shadow-sm rounded-lg   lg:w-[60.063rem] lg:h-[24.563rem]'
         />
       </div>
     </>
