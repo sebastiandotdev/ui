@@ -3,14 +3,11 @@ import Categories from '@/components/categories'
 import OffersIphone from '@/components/offers-iphone'
 import CaruselIphones from '@/components/carousel-iphones'
 import WathcCarousel from '@/components/watch-carosel'
-<<<<<<< HEAD
-import Image from 'next/image'
-import newletter from '../../public/newletter.png'
-import { Button, Input } from '@/components/ui'
-=======
 import { IconLupa } from '@/components/icons'
 import Banner from '@/components/banner'
->>>>>>> ab08d0a792f15b1679e40089f4ad96e686c1ca30
+import { Button } from '@/components/ui'
+import Image from 'next/image'
+import newletter from '../../public/newletter.png'
 
 export default function Home() {
   return (
@@ -50,12 +47,11 @@ export default function Home() {
           </div>
         </section>
       </div>
-
-<<<<<<< HEAD
-        <AppleWatch />
-        <WathcCarousel />
-        <div className='absolute inset-y-0 z-3 right-0 w-1/12 md:w-[11%] bg-gradient-to-l from-white to-transparent'></div>
-      </section>
+      <Categories />
+      <OffersIphone />
+      <CaruselIphones />
+      <Banner />
+      <WathcCarousel />
       <section className='p-10 md:p-20 bg-gray'>
         <div className='bg-white rounded-lg md:flex p-5'>
           <div className='w-full md:w-1/2 p-9 text-center md:text-left md:pl-10 lg:pl-20 flex flex-col gap-3 justify-center'>
@@ -83,13 +79,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-=======
-      <Categories />
-      <OffersIphone />
-      <CaruselIphones />
-      <Banner />
-      <WathcCarousel />
->>>>>>> ab08d0a792f15b1679e40089f4ad96e686c1ca30
     </>
   )
 }

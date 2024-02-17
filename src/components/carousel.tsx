@@ -7,6 +7,7 @@ import pluginAutoplay from 'embla-carousel-autoplay'
 import type { EmblaPluginType } from 'embla-carousel'
 import { type ReactNode, HTMLAttributes } from 'react'
 import { IconArrowLeft, IconArrowRight } from './icons'
+import { Button } from './ui'
 
 interface CarouselProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode
@@ -43,18 +44,18 @@ export default function Carousel({
       <div {...props}>{children}</div>
       {buttons && (
         <>
-          <button
+          <Button
             className='absolute top-0  left-10 md:right-[6rem] md:left-auto z-20'
             onClick={handleScrollPrev}
           >
             <IconArrowLeft />
-          </button>
-          <button
+          </Button>
+          <Button
             className='absolute top-0 left-20 md:right-[3rem] md:left-auto z-20 '
             onClick={handleScrollNext}
           >
             <IconArrowRight />
-          </button>
+          </Button>
         </>
       )}
     </div>
