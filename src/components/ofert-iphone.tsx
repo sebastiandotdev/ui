@@ -1,7 +1,7 @@
-import { ButtonBuy } from '@/components/ui/button-buy'
 import Image from 'next/image'
 import Link from 'next/link'
 import FigureIphone from 'public/figure.png'
+import { Button } from './ui'
 
 export default function OfertIphone() {
   return (
@@ -15,7 +15,9 @@ export default function OfertIphone() {
         </div>
 
         <div className='flex md:w-1/3 justify-center  items-center gap-4 mb-10'>
-          <ButtonBuy padding='px-8 py-2' />
+          <Button className='px-8 py-2 bg-[#1c4060] text-white font-bold rounded  hover:bg-[#2a4054] shadow-xl'>
+            Buy
+          </Button>
           <Link
             href={'/'}
             className='text-white  bg-[#1c4060] rounded-lg px-4 py-2 hover:px-6  hover:bg-[#2a4054] transition-all duration-500 ease-in-out'

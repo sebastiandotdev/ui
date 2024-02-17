@@ -6,6 +6,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { useCallback } from 'react'
 import { IconArrowLeft, IconArrowRight } from './icons'
+import { Button } from './ui'
 
 export default function CategoriesSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({}, [Autoplay()])
@@ -40,18 +41,18 @@ export default function CategoriesSection() {
             </Link>
           ))}
         </div>
-        <button
+        <Button
           className='embla__prev absolute top-0  left-10 md:right-16 md:left-auto  lg:hidden'
           onClick={scrollPrev}
         >
           <IconArrowLeft />
-        </button>
-        <button
+        </Button>
+        <Button
           className='embla__next  absolute top-0 left-20 md:right-8 md:left-auto lg:hidden'
           onClick={scrollNext}
         >
           <IconArrowRight />
-        </button>
+        </Button>
       </article>
     </>
   )

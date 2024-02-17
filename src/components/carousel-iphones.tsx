@@ -4,9 +4,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
-import { ButtonBuy } from '@/components/ui/button-buy'
 import { useCallback } from 'react'
 import { IconArrowLeft, IconArrowRight } from './icons'
+import { Button } from './ui'
 
 export default function CaruselIphones() {
   const [emblaRef, emblaApi] = useEmblaCarousel({}, [Autoplay()])
@@ -47,7 +47,9 @@ export default function CaruselIphones() {
                 <p className='text-xs font-semibold '>{data.price}</p>
               </div>
 
-              <ButtonBuy padding='px-8 py-1 mt-2 hover:px-12 transition-all duration-700 ease-in-out' />
+              <Button className='px-8 py-1 mt-2 hover:px-12 transition-all duration-700 ease-in-out bg-[#1c4060] text-white font-bold rounded  hover:bg-[#2a4054] shadow-xl'>
+                Buy
+              </Button>
             </Link>
           ))}
         </div>

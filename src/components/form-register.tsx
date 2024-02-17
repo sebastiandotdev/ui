@@ -6,10 +6,11 @@ import {
   IconUser,
   IconPhon,
   IconEmail,
+  IconGoogle,
 } from '@/components/icons'
 import { useState, FormEvent } from 'react'
 import Link from 'next/link'
-import { ButtonGoogle, ButtonLogin, Input } from '@/components/ui'
+import { Button, Input } from '@/components/ui'
 import { Toaster, toast } from 'sonner'
 
 function App() {
@@ -292,7 +293,9 @@ export default function FormRegister() {
         </div>
 
         <div className='mb-2'>
-          <ButtonLogin type='submit'></ButtonLogin>
+          <Button className='bg-[#2563EB] text-white py-2 px-4 rounded w-full hover:bg-[#2055c6]'>
+            Login
+          </Button>
         </div>
         <div className='mb-2 mt-4 flex gap-2'>
           <p className='text-sm'>Already have an account?</p>
@@ -307,7 +310,9 @@ export default function FormRegister() {
           </p>
         </div>
         <div className='mt-6'>
-          <ButtonGoogle />
+          <Button className=' flex justify-center gap-2 items-center bg-[#d5d8e5] rounded-2xl text-sm py-2 px-4 w-full hover:bg-[#c3c5d1]'>
+            <IconGoogle /> Continue wtih Google
+          </Button>
         </div>
       </form>
     </>
