@@ -1,17 +1,17 @@
 import Navbar from '@/components/navbar'
-import Categories from '@/components/categories-section'
-import { IconLupa } from '@/components/icons'
-import OfertIphone from '@/components/ofert-iphone'
+import Categories from '@/components/categories'
+import OffersIphone from '@/components/offers-iphone'
 import CaruselIphones from '@/components/carousel-iphones'
-import AppleWatch from '@/components/apple-watch'
 import WathcCarousel from '@/components/watch-carosel'
+import { IconLupa } from '@/components/icons'
+import Banner from '@/components/banner'
 
 export default function Home() {
   return (
     <>
-      <div className='bghomegradient bg-cover md:bg-container w-full bg-no-repeat  lg:bg-center lg:bg-cover   '>
+      <div className='bghomegradient bg-cover md:bg-container w-full bg-no-repeat  lg:bg-center lg:bg-cover'>
         <header>
-          <Navbar background='' textColor='text-white' />
+          <Navbar textColor='text-white' />
         </header>
         <section className='text-white p-4 md:px-24  flex justify-center h-[100dvh] items-center '>
           <div className='  w-full  md:w-5/5  lg:w-4/5 flex flex-col  gap-6 lg:gap-10'>
@@ -44,22 +44,12 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <section className='mb-4 relative'>
-        <Categories />
-      </section>
-      <section className='bghomegradient  px-6 relative'>
-        <OfertIphone />
-      </section>
-      <section className='relative mb-4'>
-        <CaruselIphones />
-      </section>
-      <section className='relative'>
-        <div className='absolute inset-y-0 z-[1] left-0 w-1/12 md:w-[11%] bg-gradient-to-r from-white to-transparent '></div>
 
-        <AppleWatch />
-        <WathcCarousel />
-        <div className='absolute inset-y-0 z-3 right-0 w-1/12 md:w-[11%] bg-gradient-to-l from-white to-transparent'></div>
-      </section>
+      <Categories />
+      <OffersIphone />
+      <CaruselIphones />
+      <Banner />
+      <WathcCarousel />
     </>
   )
 }
