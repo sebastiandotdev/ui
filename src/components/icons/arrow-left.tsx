@@ -1,9 +1,12 @@
-export function IconArrowLeft() {
+import { HTMLAttributes } from 'react'
+
+interface SVGProps extends HTMLAttributes<HTMLOrSVGElement> {}
+export function IconArrowLeft(props: SVGProps) {
   return (
     <>
       <svg
+        {...props}
         xmlns='http://www.w3.org/2000/svg'
-        className='icon icon-tabler icon-tabler-chevron-left hover:scale-110 duration-500'
         width='35'
         height='35'
         viewBox='0 0 24 24'
