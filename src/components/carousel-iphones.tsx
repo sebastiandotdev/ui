@@ -8,20 +8,20 @@ import Carousel from './carousel'
 
 export default function CaruselIphones() {
   return (
-    <section className='max-w-7xl mx-auto mt-10'>
-      <Carousel className='flex relative gap-5 md:gap-4' autoplay>
+    <section className='max-w-7xl mx-auto mt-10 py-10'>
+      <Carousel className='flex gap-5 md:gap-4' buttons>
         {newest.map((data, index) => (
           <Link
-            href={'/'}
+            href='/'
             key={index}
-            className=' shrink-0 snap-start hover:opacity-90 text-center rounded-xl transition-transform ease-in-out duration-500 flex flex-col
+            className='shrink-0 snap-start hover:opacity-90 text-center rounded-xl transition-transform ease-in-out duration-500 flex flex-col
               items-center '
           >
             <div className='rounded-xl p-2 flex w-auto'>
               <Image
                 src={data.src}
                 alt={`Imagen de ${data.name}`}
-                className=' size-44 object-contain'
+                className='size-44 object-contain'
               />
             </div>
             <span className='text-[#BF4800] text-xs font-bold mt-2'>New</span>

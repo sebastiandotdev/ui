@@ -7,7 +7,7 @@ import Carousel from './carousel'
 
 export default function WathcCarousel() {
   return (
-    <>
+    <section className='max-w-7xl mx-auto mt-10 py-10'>
       <Carousel className='flex md:gap-4 lg:justify-center' buttons>
         {Watch.map((data, index) => (
           <Link
@@ -20,7 +20,7 @@ export default function WathcCarousel() {
               <Image
                 src={data.src}
                 alt={`Imagen de ${data.name}`}
-                className='md:w-48 md:h-72 rounded-md mb-2 object-contain'
+                className='size-44 object-contain'
                 height={200}
               />
             </figure>
@@ -33,6 +33,6 @@ export default function WathcCarousel() {
           </Link>
         ))}
       </Carousel>
-    </>
+    </section>
   )
 }
