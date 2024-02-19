@@ -11,14 +11,15 @@ const config: Config = {
       backgroundImage: {
         home: 'url("../../public/bghome3.jpg")',
       },
-    },
-    colors: {
-      gray: '#F5F5F7',
-      black: '#000000',
-      white: '#FFFFFF',
-      purple: '#3858D6',
-      'gray-dark': '#8B8E99',
-      'blue-dark': '#3858D6',
+      colors: {
+        gray: '#F5F5F7',
+        black: '#000000',
+        white: '#FFFFFF',
+        purple: '#3858D6',
+        indigo: '#d2d2d7',
+        'gray-dark': '#8B8E99',
+        'blue-dark': '#3858D6',
+      },
     },
   },
   plugins: [],
