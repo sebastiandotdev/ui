@@ -3,7 +3,7 @@
 import { newest } from '@/utils/const'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ButtonBuy } from '@/components/ui/button-buy'
+import { Button } from './ui'
 import Carousel from './carousel'
 
 export default function CaruselIphones() {
@@ -24,14 +24,14 @@ export default function CaruselIphones() {
                 className='size-44 object-contain'
               />
             </div>
-
             <span className='text-[#BF4800] text-xs font-bold mt-2'>New</span>
             <div className='flex justify-between items-center gap-10 mt-2 mb-4 '>
               <h3 className='text-sm font-bold '>{data.name}</h3>
               <p className='text-xs font-semibold '>{data.price}</p>
             </div>
-
-            <ButtonBuy padding='px-8 py-1 mt-2 hover:px-12 transition-all duration-700 ease-in-out' />
+            <Button className='px-8 py-1 mt-2 hover:px-12 transition-all duration-700 ease-in-out bg-[#1c4060] text-white font-bold rounded  hover:bg-[#2a4054] shadow-xl'>
+              Buy
+            </Button>
           </Link>
         ))}
       </Carousel>
