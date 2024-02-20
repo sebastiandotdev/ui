@@ -11,8 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --watch",
-    "dev": "next dev",
-    "fmt": "prettier --write ."
+    "dev": "next dev"
   },
   "dependencies": {
     "embla-carousel-autoplay": "8.0.0-rc20",
@@ -37,10 +36,15 @@
     "husky": "9.0.10",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
+    "lint-staged": "15.2.2",
     "postcss": "8.4.33",
     "prettier": "3.1.1",
     "tailwindcss": "3.4.1",
     "ts-node": "10.9.2",
     "typescript": "5.3.3"
+  },
+  "lint-staged": {
+    "*": "prettier --write .",
+    "*.{ts,tsx}": "eslint --fix"
   }
 }
