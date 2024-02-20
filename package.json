@@ -11,8 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --watch",
-    "dev": "next dev",
-    "fmt": "prettier --write ."
+    "dev": "next dev"
   },
   "dependencies": {
     "embla-carousel-autoplay": "8.0.0-rc20",
@@ -46,6 +45,6 @@
   },
   "lint-staged": {
     "*": "prettier --write .",
-    "*.{ts,tsx}": "eslint --fix"
+    "*.{ts,tsx}": "next lint"
   }
 }
