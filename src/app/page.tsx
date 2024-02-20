@@ -52,7 +52,7 @@ export default function Home() {
       <CaruselIphones />
       <Banner />
       <WathcCarousel />
-      <section className='p-10 md:p-20 bg-gray'>
+      <section className='p-10 md:p-20'>
         <div className='bg-white rounded-lg md:flex p-5'>
           <div className='w-full md:w-1/2 p-9 text-center md:text-left md:pl-10 lg:pl-20 flex flex-col gap-3 justify-center'>
             <h2 className='font-bold text-xl sm:text-3xl md:text-2xl lg:text-3xl'>
@@ -61,12 +61,12 @@ export default function Home() {
             <p className='text-gray-dark font-semibold text-xs md:text-xs lg:text-sm '>
               Get free guide about smart watches daily.{' '}
             </p>
-            <div className='w-full  flex  md:flex-row items-center md:gap-6 justify-around shadow-md bg-gray py-2 px-1 rounded-lg'>
+            <div className='w-full  flex  md:flex-row items-center md:gap-6 justify-around shadow-md bg-white py-2 px-1 rounded-lg'>
               <div className='flex items-center gap-10 justify-between '>
                 <input
                   type='text'
                   placeholder='Enter Email Address'
-                  className='placeholder:text-gray-dark bg-gray placeholder:font-bold  md:placeholder:text-[12px] lg:placeholder:text-[14px] text-gray-dark focus:outline-none px-2  focus:border-none py-1 w-full'
+                  className='placeholder:text-gray-dark bg-white placeholder:font-bold  md:placeholder:text-[12px] lg:placeholder:text-[14px] text-gray-dark focus:outline-none px-2  focus:border-none py-1 w-full'
                 />
               </div>
               <Button className='bg-purple text-white py-2 font-light rounded-lg hover:bg-opacity-75 w-1/4 md:w-1/3 transition-all duration-1000 ease-in-out md:text-xs lg:text-sm'>
