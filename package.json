@@ -45,6 +45,6 @@
   },
   "lint-staged": {
     "*": "prettier --write .",
-    "*.{ts,tsx}": "next lint"
+    "*.{ts,tsx}": "eslint --fix"
   }
 }
