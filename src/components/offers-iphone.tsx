@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import FigureIphone from 'public/figure.png'
+import FigureIphone from 'public/png/figure.png'
 import { Button } from './ui'
 
 export default function OffersIphone() {
   return (
-    <section className='bghomegradient  px-6 relative'>
+    <section className='bg-black  px-6 relative'>
       <div className='flex flex-col items-center  gap-8  '>
         <div className='text-white text-center mt-20'>
           <h2 className='text-4xl md:text-5xl font-bold'>Lynx.iphones.</h2>

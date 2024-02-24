@@ -2,7 +2,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import logoPng from 'public/logo.png'
+import logoPng from 'public/png/logo.png'
 import FormRegister from '@/components/form-register'
 
 export const metadata: Metadata = {
