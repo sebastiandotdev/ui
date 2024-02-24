@@ -2,8 +2,8 @@
 
 import { infoAbout } from '@/utils/const'
 import { Network } from '@/components/icons'
-import iphoneIcon from 'public/bgInfo.png'
-import aboutProfile from 'public/about-profile.png'
+import iphoneIcon from 'public/png/bgInfo.png'
+import aboutProfile from 'public/png/about-profile.png'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Navbar from '@/components/navbar'
@@ -40,11 +40,11 @@ export default function About() {
           ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula
           sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.
         </h5>
-        <figure className='w-full flex justify-center items-center my-6'>
+        <figure className=' flex justify-center my-6'>
           <Image
             src={iphoneIcon}
             alt='Lynx description tags dev'
-            className='border rounded-2xl h-2/3'
+            className='border  rounded-2xl w-[80%] h-[50%]'
           />
         </figure>
         <div className='flex  justify-center '>

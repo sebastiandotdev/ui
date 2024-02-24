@@ -1,6 +1,6 @@
 import FormLoginUser from '@/components/login-user'
 import type { Metadata } from 'next'
-import logoPng from 'public/logo.png'
+import logoPng from 'public/png/logo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/navbar'

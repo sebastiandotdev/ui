@@ -1,19 +1,41 @@
+'use client'
 import Navbar from '@/components/navbar'
 import Categories from '@/components/categories'
 import OffersIphone from '@/components/offers-iphone'
 import CaruselIphones from '@/components/carousel-iphones'
 import WathcCarousel from '@/components/watch-carosel'
-import { IconLupa } from '@/components/icons'
+// import { IconLupa } from '@/components/icons'
 import Banner from '@/components/banner'
 import { Button } from '@/components/ui'
 import Image from 'next/image'
-import newletter from '../../public/newletter.png'
+import newletter from '../../public/png/newletter.png'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [prevScrollPos, setPrevScrollPos] = useState<number>(0)
+  const [visible, setVisible] = useState<boolean>(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10)
+      setPrevScrollPos(currentScrollPos)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [prevScrollPos, visible])
+
   return (
     <>
-      <div className='bghomegradient bg-cover md:bg-container w-full bg-no-repeat  lg:bg-center lg:bg-cover'>
-        <header>
+      <div className='bg-home bg-cover md:bg-container w-full bg-no-repeat  lg:bg-center lg:bg-cover'>
+        <header
+          className={`fixed top-0 z-20  w-full shadow-sm transition-opacity duration-700 ease-in-out ${
+            visible
+              ? 'opacity-100 bg-black  bg-opacity-25 backdrop-blur-md  '
+              : 'opacity-0 backdrop-blur-md  bg-opacity-25 '
+          }`}
+        >
           <Navbar textColor='text-white' />
         </header>
         <section className='text-white p-4 md:px-24  flex justify-center h-[100dvh] items-center '>
@@ -22,7 +44,7 @@ export default function Home() {
               <h1 className='text-3xl text-wrap  text-center  md:text-[3rem] lg:text-[3.8rem]  font-bold leading-none'>
                 Discover The Best Selling And Affordable Products
               </h1>
-              <p className='text-white text-base text-wrap  leading-snug'>
+              <p className='text-white text-lg leading-snug text-pretty'>
                 Find here the best products on the market, reliable and
                 affordable. Us Focus on product quality. Here you can find all
                 the products manufactured by the top brands, even those that
@@ -31,7 +53,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className='w-full  flex  md:flex-row items-center md:gap-6 justify-around bg-white py-2 px-1 rounded-2xl'>
+            {/* <div className='w-full  flex  md:flex-row items-center md:gap-6 justify-around bg-white py-2 px-1 rounded-2xl'>
               <div className='flex items-center gap-10 justify-between '>
                 <IconLupa />
                 <input
@@ -43,7 +65,7 @@ export default function Home() {
               <Button className='bg-[#1c4060] text-white py-3 font-light rounded-2xl hover:bg-opacity-75 hover:bg-black w-1/4 md:w-1/3 transition-all duration-1000 ease-in-out'>
                 Search
               </Button>
-            </div>
+            </div> */}
           </div>
         </section>
       </div>

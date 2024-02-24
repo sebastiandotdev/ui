@@ -1,7 +1,7 @@
 import { contactInfo } from '@/utils/const'
 import Image from 'next/image'
-import CircleOne from 'public/Ellipse.png'
-import CircleTwo from 'public/Ellipse2.png'
+import CircleOne from 'public/png/Ellipse.png'
+import CircleTwo from 'public/png/Ellipse2.png'
 import { Network } from '@/components/icons'
 import type { Metadata } from 'next'
 import { Input } from '@/components/ui'
@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <>
       <Navbar
-        background='shadow-md shadow-gray-dark'
+        background='shadow-md shadow-gray-dark '
         textColor='text-gray-dark'
       />
 

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { navbar } from '@/utils/const'
-import logoPng from 'public/logo.png'
+import logoPng from 'public/png/logo.png'
 import { IconLogo } from './icons'
 type Props = {
   background?: string
@@ -31,7 +31,7 @@ export default function Navbar(props: Props) {
     <>
       {/* Version Tablets - Desktop  */}
       <nav
-        className={`flex relative w-full h-[70px] bg-contain bg-transparent ${props.background}  justify-around items-center  `}
+        className={`flex   w-full h-[70px] bg-contain bg-transparent ${props.background}  justify-around items-center  `}
       >
         <div className='flex items-center w-2/3 sm:w-20 '>
           <Link
