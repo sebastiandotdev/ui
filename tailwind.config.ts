@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        home: 'url("../../public/bghome3.jpg")',
+        home: 'url("../../public/jpg/bghome4.jpg")',
       },
       colors: {
         gray: '#F5F5F7',
