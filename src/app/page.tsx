@@ -1,43 +1,18 @@
-'use client'
-import Navbar from '@/components/navbar'
 import Categories from '@/components/categories'
 import OffersIphone from '@/components/offers-iphone'
 import CaruselIphones from '@/components/carousel-iphones'
 import WathcCarousel from '@/components/watch-carosel'
-// import { IconLupa } from '@/components/icons'
 import Banner from '@/components/banner'
 import { Button } from '@/components/ui'
 import Image from 'next/image'
 import newletter from '../../public/png/newletter.png'
-import { useEffect, useState } from 'react'
+import Header from '@/components/header'
 
 export default function Home() {
-  const [prevScrollPos, setPrevScrollPos] = useState<number>(0)
-  const [visible, setVisible] = useState<boolean>(true)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10)
-      setPrevScrollPos(currentScrollPos)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [prevScrollPos, visible])
-
   return (
     <>
       <div className='bg-home bg-cover md:bg-container w-full bg-no-repeat  lg:bg-center lg:bg-cover'>
-        <header
-          className={`fixed top-0 z-20  w-full shadow-sm transition-opacity duration-700 ease-in-out ${
-            visible
-              ? 'opacity-100 bg-black  bg-opacity-25 backdrop-blur-md  '
-              : 'opacity-0 backdrop-blur-md  bg-opacity-25 '
-          }`}
-        >
-          <Navbar textColor='text-white' />
-        </header>
+        <Header />
         <section className='text-white p-4 md:px-24  flex justify-center h-[100dvh] items-center '>
           <div className='  w-full  md:w-5/5  lg:w-4/5 flex flex-col  gap-6 lg:gap-10'>
             <div className='   bg-opacity-50    rounded-lg shadow-2xl p-8 flex flex-col gap-8  transition-all duration-1000 ease-in-out  '>
