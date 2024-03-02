@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 z-20  w-full shadow-sm transition-opacity duration-700 ease-in-out ${
+        className={`fixed top-0 z-20  h-[70px] mx-auto py-4  inset-0 shadow-sm transition-opacity duration-700 ease-in-out ${
           visible
             ? 'opacity-100 bg-black  bg-opacity-25 backdrop-blur-md  '
             : 'opacity-0 backdrop-blur-md  bg-opacity-25 '

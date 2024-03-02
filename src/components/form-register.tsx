@@ -14,15 +14,6 @@ import Link from 'next/link'
 import { Button, Input } from '@/components/ui'
 import { Toaster, toast } from 'sonner'
 
-function App() {
-  return (
-    <div>
-      <Toaster />
-      <button onClick={() => toast('My first toast')}>Give me a toast</button>
-    </div>
-  )
-}
-
 export default function FormRegister() {
   const [showIconConfirmPassword, setShowIconConfirmPassword] = useState(false)
   const [showIconPassword, setShowIconPassword] = useState(false)
@@ -101,6 +92,7 @@ export default function FormRegister() {
     } else {
       setMessageErroPhoneNumber('')
     }
+    console.log(url_api)
 
     try {
       const res = await fetch(`${url_api}/auth/register`, {
@@ -113,8 +105,6 @@ export default function FormRegister() {
         }),
       })
       const data = await res.json()
-
-      console.log(data)
 
       // Message errors
       if (data.detail) {
