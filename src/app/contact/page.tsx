@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <>
       <Navbar
-        background='shadow-md shadow-gray-dark '
+        background='shadow-md shadow-gray-dark p-4'
         textColor='text-gray-dark'
       />
 

@@ -20,7 +20,7 @@ export default function LoginUser() {
 
   return (
     <>
-      <form className='bg-[#F5F5F7] px-8 pt-6 mb-4'>
+      <form className='bg-[#F5F5F7] px-8 pt-6 mb-4 '>
         <h3 className='mt-2 mb-4 text-[#8B8E99] font-semibold text-2xl text-center md:text-left'>
           Login
         </h3>

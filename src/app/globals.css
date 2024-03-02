@@ -15,7 +15,9 @@
   font-family: 'onest-medium';
   src: url('/fonts/Onest-Medium.ttf');
 }
-
+* {
+  /* border: 1px solid red; */
+}
 html,
 body {
   scroll-behavior: smooth;

@@ -25,7 +25,7 @@ export default function About() {
           About the Lynx.
         </h2>
         <div className='flex items-center justify-center gap-x-8 text-center my-6 w-max mx-auto'>
-          <figure className='flex justify-center items-center gap-x-4'>
+          <figure className=' flex justify-center items-center gap-x-4'>
             <Image src={aboutProfile} alt='Teams Lynx cop' />
             <figcaption className='font-semibold  text-gray-dark'>
               Feyz ibrahim
@@ -40,7 +40,7 @@ export default function About() {
           ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula
           sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.
         </h5>
-        <figure className=' flex justify-center my-6'>
+        <figure className=' flex justify-center my-6 container mx-auto'>
           <Image
             src={iphoneIcon}
             alt='Lynx description tags dev'
