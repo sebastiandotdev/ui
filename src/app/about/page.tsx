@@ -17,11 +17,12 @@ export default function About() {
   return (
     <>
       <Navbar
-        background='shadow-md shadow-gray-dark'
+        background='shadow-md shadow-gray-dark p-4 '
         textColor='text-gray-dark'
       />
+
       <section className='px-2 bg-gray min-h-screen mb-6'>
-        <h2 className='mx-auto   text-6xl font-semibold text-gray-dark pt-32 block text-center'>
+        <h2 className=' text-6xl font-semibold text-gray-dark pt-32 block text-center '>
           About the Lynx.
         </h2>
         <div className='flex items-center justify-center gap-x-8 text-center my-6 w-max mx-auto'>
@@ -44,7 +45,7 @@ export default function About() {
           <Image
             src={iphoneIcon}
             alt='Lynx description tags dev'
-            className='border  rounded-2xl w-[80%] h-[50%]'
+            className='border rounded-2xl w-[80%] h-[50%]'
           />
         </figure>
         <div className='flex  justify-center '>
