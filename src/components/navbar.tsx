@@ -32,7 +32,7 @@ export default function Navbar(props: Props) {
     <>
       {/* Version Tablets - Desktop  */}
       <nav
-        className={`flex bg-contain bg-transparent ${props.background}  justify-around items-center py-2 `}
+        className={`flex bg-contain bg-transparent ${props.background}  justify-around items-center mb-2 `}
       >
         <div className='flex items-center w-2/3 sm:w-20 '>
           <Link
@@ -40,7 +40,7 @@ export default function Navbar(props: Props) {
             className='flex items-center w-full justify-around sm:w-20 gap-1 '
           >
             <IconLogo />
-            <span className={`${props.textColor} font-semibold `}>Lynx</span>
+            <span className={`${props.textColor} font-semibold`}>Lynx</span>
           </Link>
         </div>
         <div
