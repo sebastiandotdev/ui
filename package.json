@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev-vscode": "pnpm install --frozen-lockfile && pnpm run dev",
     "prepare": "husky",
     "test-ci": "jest --ci --runInBand",
     "build": "next build",
