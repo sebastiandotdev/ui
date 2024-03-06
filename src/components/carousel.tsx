@@ -5,7 +5,7 @@ import useCarousel from 'embla-carousel-react'
 import pluginAutoplay from 'embla-carousel-autoplay'
 
 import type { EmblaCarouselType, EmblaPluginType } from 'embla-carousel'
-import { type ReactNode, HTMLAttributes } from 'react'
+import type { HTMLAttributes, type ReactNode } from 'react'
 import { IconArrowLeft, IconArrowRight } from './icons'
 import { Button } from './ui'
 
@@ -28,21 +28,22 @@ export default function Carousel({
 
   const plugins: EmblaPluginType[] = []
 
-  if (autoplay) {
+  if (autoplay)
     plugins.push(pluginAutoplay({ delay: 3000 }))
-  }
 
   const [emblaNode, emblaApi] = useCarousel(
-    { loop: loop, align: 'center' },
+    { loop, align: 'center' },
     plugins,
   )
 
   const handleScrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
+    if (emblaApi)
+      emblaApi.scrollPrev()
   }, [emblaApi])
 
   const handleScrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
+    if (emblaApi)
+      emblaApi.scrollNext()
   }, [emblaApi])
 
   const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
@@ -51,7 +52,8 @@ export default function Carousel({
   }, [])
 
   useEffect(() => {
-    if (!emblaApi) return
+    if (!emblaApi)
+      return
 
     onSelect(emblaApi)
 
@@ -60,23 +62,23 @@ export default function Carousel({
   }, [emblaApi, onSelect])
 
   return (
-    <div ref={emblaNode} className='overflow-hidden relative ml-2'>
+    <div ref={emblaNode} className="overflow-hidden relative ml-2">
       <div {...props}>{children}</div>
       {buttons && (
         <>
           <Button
-            className='absolute top-1/2 left-1 disabled:opacity-0 transition-colors bg-indigo/60 text-white rounded-full flex items-center justify-center text-center p-0.5'
+            className="absolute top-1/2 left-1 disabled:opacity-0 transition-colors bg-indigo/60 text-white rounded-full flex items-center justify-center text-center p-0.5"
             disabled={prevBtnDisabled}
             onClick={handleScrollPrev}
           >
-            <IconArrowLeft className='icon icon-tabler icon-tabler-chevron-left size-12' />
+            <IconArrowLeft className="icon icon-tabler icon-tabler-chevron-left size-12" />
           </Button>
           <Button
-            className='absolute top-1/2 right-1 disabled:opacity-0 bg-indigo/60 text-white rounded-full flex items-center justify-center text-center p-0.5'
+            className="absolute top-1/2 right-1 disabled:opacity-0 bg-indigo/60 text-white rounded-full flex items-center justify-center text-center p-0.5"
             disabled={nextBtnDisabled}
             onClick={handleScrollNext}
           >
-            <IconArrowRight className='icon icon-tabler icon-tabler-chevron-right size-12' />
+            <IconArrowRight className="icon icon-tabler icon-tabler-chevron-right size-12" />
           </Button>
         </>
       )}
