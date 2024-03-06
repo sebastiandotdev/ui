@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import newletter from '../../public/png/newletter.png'
+import newletter from 'public/png/newletter.png'
 import Categories from '@/components/categories'
 import OffersIphone from '@/components/offers-iphone'
 import CaruselIphones from '@/components/carousel-iphones'
