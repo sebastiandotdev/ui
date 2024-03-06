@@ -5,7 +5,7 @@ import useCarousel from 'embla-carousel-react'
 import pluginAutoplay from 'embla-carousel-autoplay'
 
 import type { EmblaCarouselType, EmblaPluginType } from 'embla-carousel'
-import type { HTMLAttributes, type ReactNode } from 'react'
+import type { HTMLAttributes, ReactNode } from 'react'
 import { IconArrowLeft, IconArrowRight } from './icons'
 import { Button } from './ui'
 
