@@ -5,12 +5,12 @@
   "private": true,
   "scripts": {
     "prepare": "husky",
-    "test-ci": "jest --ci --runInBand",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
     "test": "jest --watch",
-    "dev": "next dev"
+    "dev": "next dev",
+    "ci": "pnpm run lint && pnpm jest --ci"
   },
   "dependencies": {
     "embla-carousel-autoplay": "8.0.0",
