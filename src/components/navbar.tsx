@@ -9,7 +9,7 @@ import { navbar } from '@/utils/const'
 
 interface Props {
   background?: string
-  textColor: string
+  textColor?: string
 }
 
 export default function Navbar(props: Props) {
