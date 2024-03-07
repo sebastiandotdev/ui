@@ -16,7 +16,6 @@ import iphone14pro from 'public/png/iphone14pro.png'
 import wachtTwo from '../../public/png/WatchTwo.png'
 import wachtThree from '../../public/png/WatchThree.png'
 import wachtFour from '../../public/png/WatchOne.png'
-import wachtFive from '../../public/png/WatchTwo.png'
 
 export const infoAbout = [
   {
@@ -180,7 +179,7 @@ export const Watch = [
 
   {
     name: 'Apple Watch 8',
-    src: wachtFive,
+    src: wachtTwo,
     price: 'From ₹59,000',
   },
   {
@@ -190,7 +189,7 @@ export const Watch = [
   },
   {
     name: 'Apple Watch 8',
-    src: wachtFive,
+    src: wachtTwo,
     price: 'From ₹59,000',
   },
 
@@ -207,7 +206,7 @@ export const Watch = [
   },
   {
     name: 'Apple Watch 8',
-    src: wachtFive,
+    src: wachtTwo,
     price: 'From ₹59,000',
   },
 ]

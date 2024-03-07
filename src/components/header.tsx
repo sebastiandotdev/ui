@@ -27,7 +27,7 @@ export default function Header() {
             : 'opacity-0 backdrop-blur-md  bg-opacity-25 '
         }`}
       >
-        <Navbar textColor='text-white' />
+        <Navbar textColor="text-white" />
       </header>
     </>
   )

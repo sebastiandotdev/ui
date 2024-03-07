@@ -3,13 +3,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import { navbar } from '@/utils/const'
 import logoPng from 'public/png/logo.png'
 import { IconLogo } from './icons'
+import { navbar } from '@/utils/const'
 
-type Props = {
+interface Props {
   background?: string
-  textColor: string
+  textColor?: string
 }
 
 export default function Navbar(props: Props) {
@@ -23,7 +23,8 @@ export default function Navbar(props: Props) {
         setIsOpenMenuHamburger(false)
         setIsClosingMenu(false)
       }, 200)
-    } else {
+    }
+    else {
       setIsOpenMenuHamburger(true)
     }
   }
@@ -34,10 +35,10 @@ export default function Navbar(props: Props) {
       <nav
         className={`flex bg-contain bg-transparent ${props.background}  justify-around items-center mb-2 `}
       >
-        <div className='flex items-center w-2/3 sm:w-20 '>
+        <div className="flex items-center w-2/3 sm:w-20 ">
           <Link
-            href='/'
-            className='flex items-center w-full justify-around sm:w-20 gap-1 '
+            href="/"
+            className="flex items-center w-full justify-around sm:w-20 gap-1 "
           >
             <IconLogo />
             <span className={`${props.textColor} font-semibold`}>Lynx</span>
@@ -49,7 +50,7 @@ export default function Navbar(props: Props) {
           {navbar.map((data, index) => (
             <Link
               href={data.src}
-              className='relative group'
+              className="relative group"
               key={index}
               onClick={() => setIsClosingMenu(true)}
             >
@@ -58,25 +59,25 @@ export default function Navbar(props: Props) {
           ))}
         </div>
 
-        <div className='font-semibold hidden sm:flex gap-2 '>
-          <Link href='/login' className={`${props.textColor}`}>
+        <div className="font-semibold hidden sm:flex gap-2 ">
+          <Link href="/login" className={`${props.textColor}`}>
             Login
           </Link>
           <span className={`${props.textColor}`}>|</span>
-          <Link href='/register' className={`${props.textColor}`}>
+          <Link href="/register" className={`${props.textColor}`}>
             Sign Up
           </Link>
         </div>
 
-        <button onClick={handleIsOpenMenuHamburger} className=' flex sm:hidden'>
+        <button onClick={handleIsOpenMenuHamburger} className=" flex sm:hidden">
           <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
             style={{ fill: '#8B8E99', transform: '', msFilter: '' }}
           >
-            <path d='M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z'></path>
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
           </svg>
         </button>
       </nav>
@@ -88,13 +89,13 @@ export default function Navbar(props: Props) {
             isClosingMenu ? 'scale-out-tr' : 'scale-in-tr'
           }`}
         >
-          <div className=' flex flex-col text-2xl items-center justify-center font-semibold  bg-white bg- w-full h-[100vh]'>
+          <div className=" flex flex-col text-2xl items-center justify-center font-semibold  bg-white bg- w-full h-[100vh]">
             <Link
-              href='/'
-              className='flex gap-2 items-center absolute left-2 top-4'
+              href="/"
+              className="flex gap-2 items-center absolute left-2 top-4"
             >
-              <Image src={logoPng} alt='' className='h-10 w-10' />
-              <span className='text-[#8B8E99] text-lg'>Lynx</span>
+              <Image src={logoPng} alt="" className="h-10 w-10" />
+              <span className="text-[#8B8E99] text-lg">Lynx</span>
             </Link>
             <button
               onClick={handleIsOpenMenuHamburger}
@@ -103,43 +104,43 @@ export default function Navbar(props: Props) {
               }`}
             >
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='30'
-                height='30'
-                viewBox='0 0 24 24'
-                strokeWidth='2'
-                stroke='currentColor'
-                fill='none'
-                strokeLinecap='round'
-                strokeLinejoin='round'
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                <path d='M18 6l-12 12' />
-                <path d='M6 6l12 12' />
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M18 6l-12 12" />
+                <path d="M6 6l12 12" />
               </svg>
             </button>
             {navbar.map((data, index) => (
               <Link
                 href={data.src}
-                className=' text-left  m-6 text-[#8B8E99] hover:text-[#3858D6]'
+                className=" text-left  m-6 text-[#8B8E99] hover:text-[#3858D6]"
                 key={index}
                 onClick={handleIsOpenMenuHamburger}
               >
                 {data.title}
               </Link>
             ))}
-            <div className='font-semibold flex gap-4 m-6'>
+            <div className="font-semibold flex gap-4 m-6">
               <Link
-                href='/login'
-                className='text-[#8B8E99] hover:text-[#3858D6]'
+                href="/login"
+                className="text-[#8B8E99] hover:text-[#3858D6]"
                 onClick={handleIsOpenMenuHamburger}
               >
                 Login
               </Link>
-              <span className='text-[#8B8E99]'>|</span>
+              <span className="text-[#8B8E99]">|</span>
               <Link
-                href='/register'
-                className='text-[#8B8E99] hover:text-[#3858D6]'
+                href="/register"
+                className="text-[#8B8E99] hover:text-[#3858D6]"
                 onClick={handleIsOpenMenuHamburger}
               >
                 Sign Up
